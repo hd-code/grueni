@@ -9,6 +9,7 @@ import * as path from 'path';
 import * as os from 'os';
 import express from 'express';
 import console from 'console';
+import qr from 'qrcode-terminal';
 
 // -----------------------------------------------------------------------------
 
@@ -38,7 +39,7 @@ const app = express();
 
 // Logger
 app.use((req, _, next) => {
-    console.log('Request:', req.url, ', Device:', req.headers["user-agent"]??'unknown device');
+    console.log(req.url, 'requested from', req.headers["user-agent"]??'unknown device');
     next();
 });
 
@@ -48,11 +49,13 @@ app.use('/assets', express.static(assetsDir, {fallthrough: false}));
 
 // Create and Start Server
 https.createServer({key,cert}, app).listen(port, () => {
+    const siteURL = 'https://' + os.hostname() + ':' + port;
+
     console.log('Web Server listening on port:', port);
     console.log('');
-    console.log('Access this site:');
-    console.log('- https://localhost:'+port, '=> locally');
-    console.log('- https://'+os.hostname()+':'+port, '=> other device in the same network');
+    console.log('Access this site:', siteURL);
+    qr.generate(siteURL, { small: true });
     console.log('');
     console.log('Logs:');
+    console.log('');
 });
