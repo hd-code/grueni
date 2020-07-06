@@ -1,14 +1,80 @@
-<!-- Example "Basic-Cube" from: https://stemkoski.github.io/AR-Examples/ -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- include A-Frame obviously -->
-<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
-<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
-  </a-scene>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing AR-Menu</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent('scale-on-mouseenter', {
+            schema: {
+                to: {
+                    default: '2.5 2.5 2.5',
+                    type: 'vec3'
+                }
+            },
+
+            init: function () {
+                var data = this.data;
+                var el = this.el;
+                this.el.addEventListener('mouseenter', function () {
+                    el.object3D.scale.copy(data.to);
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene
+
+        embedded
+        stats
+        vr-mode-ui="enabled: false"
+        arjs
+    >
+        <a-assets>
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+            <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        </a-assets>
+
+        <!-- Objects -->
+        <a-box id="entity" class="clickable"
+            src="#boxTexture" position="1 2 0" rotation="0 0 0" scale="1 1 1"
+            animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+            animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"
+            event-set__click="visible: false"
+            ></a-box>
+        <!-- <a-sky src="#skyTexture"></a-sky>
+        <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+        <a-entity
+            text="value: Hello, A-Frame!; color: #BBB"
+            position="-0.9 0.2 -3"
+            scale="1.5 1.5 1.5"></a-entity> -->
+
+        <!-- Light -->
+        <!-- <a-light type="ambient" color="#445451"></a-light>
+        <a-light type="point" intensity="2" position="2 4 4"></a-light> -->
+
+        <!-- Marker Camera => Marker is scene origin at (0,0,0) -->
+        <a-marker-camera preset="hiro">
+            <a-cursor></a-cursor>
+        </a-marker-camera>
+    </a-scene>
+
+    <script>
+        const el = document.getElementById('entity')
+        el.addEventListener('click', () => {
+
+        });
+    </script>
 </body>
+
+</html>

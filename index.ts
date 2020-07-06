@@ -10,6 +10,7 @@ import * as os from 'os';
 import express from 'express';
 import console from 'console';
 import qr from 'qrcode-terminal';
+import { url } from 'inspector';
 
 // -----------------------------------------------------------------------------
 
@@ -39,7 +40,11 @@ const app = express();
 
 // Logger
 app.use((req, _, next) => {
-    console.log(req.url, 'requested from', req.headers["user-agent"]??'unknown device');
+    const obj = {
+        url: req.url,
+        userAgent: req.headers["user-agent"]??'unknown device'
+    };
+    console.log(obj);
     next();
 });
 
