@@ -2,16 +2,6 @@
 
 Dies ist der Web-Server, der die "Grüni" AR-App ausliefert.
 
-In `docs/` ist die Spezifikation der REST-API für den Raspi.
-
-## Hinweise für Jetzt
-
-- Eine Anfrage an den Server liefert direkt die index.html aus
-- zusätzliche Assets können in den Assets-Ordner gelegt werden und entsprechen im HTML eingebunden werden (Bsp: `<img src="assets/test.jpg">`)
-- das Einbinden von lokalen Dateien funktioniert aus Sicherheitsgründen nur über den Assets-Ordner
-- Das aktuelle Beispiel ist "Basic-Cube" von https://stemkoski.github.io/AR-Examples/
-- Der Marker ist `hiro.png`. Einfach den Marker auf dem Bildschirm anzeigen und dann mit dem Handy abscannen, es müsste nun ein halb-transparenter Würfel über dem Marker erscheinen
-
 ## Installation
 
 Benötigte Software: Node (>= v12) und NPM (>= v6)

@@ -29,7 +29,7 @@ AFRAME.registerComponent('arclick', {
     schema: { type: 'string' },
     init: function() {
         const func = getFunctionByName(this.data);
-        this.el.addEventListener('click', func);
+        this.el.addEventListener('mouseup', func);
     },
 });
 
