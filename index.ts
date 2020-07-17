@@ -8,9 +8,7 @@ import * as https from 'https';
 import * as path from 'path';
 import * as os from 'os';
 import express from 'express';
-import console from 'console';
 import qr from 'qrcode-terminal';
-import { url } from 'inspector';
 
 // -----------------------------------------------------------------------------
 

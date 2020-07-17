@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Grueni</title>
 
+    <!-- Importing all scripts -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
+    <script src="assets/arclick.js"></script>
 
-    <script src="assets/main.js"></script>
+    <script src="assets/test.js"></script>
 </head>
 <body>
-    <a-scene embedded vr-mode-ui="enabled: false" arjs>
-        <a-marker>
-            <a-box material="color: red" test></a-box>
+    <a-scene vr-mode-ui="enabled: false" arjs>
+        <!-- Assets - will be preloaded on page load -->
+        <a-assets id="assets">
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        </a-assets>
+
+        <!-- camera and cursor for click events -->
+        <a-entity camera cursor="rayOrigin: mouse" raycaster="far: 1000; objects: [arclick]"></a-entity>
+
+        <!-- AR-Elements should be placed inside the marker -->
+        <a-marker id="elements">
+
+            <!-- This is just an example element, please replace this soon! --->
+            <a-box arclick="testFunc" position="0 0 0" src="#boxTexture"></a-box>
+            <!----------------------------------------------------------------->
+
         </a-marker>
-        
-        <a-entity camera cursor="rayOrigin: mouse"></a-entity>
     </a-scene>
 </body>
 </html>
