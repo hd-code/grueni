@@ -1,0 +1,11 @@
+{
+    "tomato": {
+        "species": "tomato",
+        "daysTilReplant": 20,
+        "minSoilHumidity": 20,
+        "plantingProcess": [
+
+        ],
+        "wikipediaURL": "https://de.wikipedia.org/wiki/Tomate"
+    }
+}
