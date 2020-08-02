@@ -1,4 +1,4 @@
-/*! storage v0.0.2 from hd-snippets-js | MIT | © Hannes Dröse https://github.com/hd-code/hd-snippets-js */
+/*! storage v0.1.0 from hd-snippets-js | MIT | © Hannes Dröse https://github.com/hd-code/hd-snippets-js */
 
 // -----------------------------------------------------------------------------
 
@@ -62,7 +62,7 @@ export interface Storage<T> {
  * the lifetime of the application. It can be used as a basis to implement more
  * advanced storage providers. */
 export function BaseStorage<T>(initCache?: StorageMap<T>): Storage<T> {
-    let cache = initCache ?? {};
+    let cache = !!initCache ? deepClone(initCache) : {};
 
     return {
         clear: () => {
@@ -70,28 +70,28 @@ export function BaseStorage<T>(initCache?: StorageMap<T>): Storage<T> {
             cache = {};
             return result;
         },
-    
+        
         delete: (id: string) => {
             const result = cache[id];
             delete cache[id];
             return result;
         },
-    
+
         filter: (filterFunc: (element: T) => boolean) => {
             const result: StorageMap<T> = {};
             for (const key in cache) {
                 try {
                     if (filterFunc(cache[key])) {
-                        result[key] = cache[key];
+                        result[key] = deepClone(cache[key]);
                     }
                 } catch (_) {}
             }
             return result;
         },
         
-        get: (id: string) => cache[id],
+        get: (id: string) => deepClone(cache[id]),
 
-        getAll: () => cache,
+        getAll: () => deepClone(cache),
 
         replace: (replaceFunc: (element: T) => T, preview?: boolean) => {
             const result: StorageMap<T> = {};
@@ -109,13 +109,13 @@ export function BaseStorage<T>(initCache?: StorageMap<T>): Storage<T> {
         save: (element: T) => {
             let id = '';
             while (id = generateKey(), cache[id] !== undefined);
-            cache[id] = element;
+            cache[id] = deepClone(element);
             return id;
         },
         
         set: (id: string, element: T) => {
             const orig = cache[id];
-            cache[id] = element;
+            cache[id] = deepClone(element);
             return orig;
         }
     };
@@ -137,4 +137,26 @@ function generateKey(): string {
 function generateHexDigit(): string {
     const number = Math.floor(Math.random() * hexBase);
     return number.toString(hexBase)[0];
+}
+
+// -----------------------------------------------------------------------------
+
+function deepClone<T>(original: T): T {
+    if (Array.isArray(original)) {
+        let result: any = [];
+        for (let i = 0, ie = original.length; i < ie; i++) {
+            result[i] = deepClone(original[i]);
+        }
+        return result;
+    }
+
+    if (original !== null && typeof original === 'object') {
+        let result: any = {};
+        for (const key in original) {
+            result[key] = deepClone(original[key]);
+        }
+        return result;
+    }
+
+    return original;
 }
