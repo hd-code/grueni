@@ -2,8 +2,6 @@ import * as io from 'socket.io';
 
 // -----------------------------------------------------------------------------
 
-const port = process.env.PORT || 5210;
+const port = process.env.PORT_RASPI || 4200;
 
-const server = io.default(port);
-
-server
+const socket = io.default(port);
