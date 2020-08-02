@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/style.css">
 
   <!-- Importing all scripts -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script> -->
@@ -49,22 +49,41 @@
 
     <a-image src="#marker"></a-image>
     <a-sky color="#6EBAA7"></a-sky>
+
+    <!------------------------------------------------------------------------->
+
+    <a-entity id="topbar">
+      <a-entity
+          id="pot1"
+          geometry="primitive: box"
+          position="0 2 0"
+          text="value: {{text}}; align: center; width: 6;"
+          v-bind:text="text2"
+          v-bind:arclick="click"
+      ></a-entity>
+    </a-entity>
+    <a-entity id="pots">
+      <a-entity id="pot1"></a-entity>
+    </a-entity>
+    <a-entity id="dialog"></a-entity>
     
+<!-- 
+    <a-entity id="elements">
 
-    <a-entity id="elements" hidden="true">
-
-      <a-entity
-        position="-5 8 -2"
-        text="value: Luftfeuchtigkeit: 72%; align: center; width: 6;"
-      ></a-entity>
-      <a-entity
-        position="0 8 -2"
-        text="value: Helligkeit: 700lm; align: center; width: 6;"
-      ></a-entity>
-      <a-entity
-        position="5 8 -2"
-        text="value: Temperatur: 24°C; align: center; width: 6;"
-      ></a-entity>
+      <a-entity id="topbar">
+        <a-entity
+          position="-5 8 -2"
+          text="value: Luftfeuchtigkeit: 72%; align: center; width: 6;"
+        ></a-entity>
+        <a-entity
+          position="0 8 -2"
+          text="value: Helligkeit: 700lm; align: center; width: 6;"
+        ></a-entity>
+        <a-entity
+          position="5 8 -2"
+          text="value: Temperatur: 24°C; align: center; width: 6;"
+        ></a-entity>
+    </a-entity>
 
       <a-entity position="-3 2 -2">
         <a-entity text="value: Option 1; align: center; width: 4" position="-2 3 0"></a-entity>
@@ -95,7 +114,7 @@
           position="0 0 -0.75"
           wireframe="true"
         ></a-box>
-      </a-entity>
+      </a-entity> -->
 
       <!-- <a-entity class="button" position="-5 8 -2">
         <a-box color="#f00" position="0 0 0" scale="0.1 0.1 10"></a-box>
@@ -104,5 +123,11 @@
       </a-entity> -->
     </a-entity>
   </a-scene>
+
+  <div id="popup">
+
+  </div>
+
+  <script src="assets/vue.js"></script>
 </body>
 </html>
