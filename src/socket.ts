@@ -1,7 +1,18 @@
-import * as io from 'socket.io';
+import socketio from 'socket.io';
 
 // -----------------------------------------------------------------------------
 
-const port = process.env.PORT_RASPI || 4200;
+const socket = socketio();
 
-const socket = io.default(port);
+socket.on('connection', (socket) => {
+    console.log(socket);
+    console.log('connection was established');
+
+    socket.on('refresh-sensors', function(data) {
+        console.log(data)
+    })
+});
+
+// -----------------------------------------------------------------------------
+
+export default socket;
