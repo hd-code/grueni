@@ -19,4 +19,6 @@ socket.on('message', (msg, rinfo) => {
     console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
 });
 
+// -----------------------------------------------------------------------------
+
 export default socket;

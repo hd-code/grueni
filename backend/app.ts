@@ -1,8 +1,6 @@
 import express from 'express';
 import * as path from 'path';
 
-import { getInitData } from './tmp';
-
 // -----------------------------------------------------------------------------
 
 const assetsDir = path.join(__dirname, '..', 'assets');
@@ -27,8 +25,7 @@ app.use('/assets', express.static(assetsDir, { fallthrough: false }));
 // Backend API
 
 app.get('/api', (_, res) => {
-    const data = getInitData();
-    res.send(data);
+    res.send({data: 'nicer content'});
 });
 
 // -----------------------------------------------------------------------------

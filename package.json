@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "make:ssl": "openssl req -nodes -new -x509 -days 1024 -keyout ssl/server.key -out ssl/server.cert",
-    "raspi": "ts-node raspi-mock.ts",
-    "start": "ts-node src",
+    "raspi": "python raspi/mock.py",
+    "start": "ts-node backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
