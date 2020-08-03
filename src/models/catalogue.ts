@@ -20,8 +20,6 @@ export interface IPlantingStep {
 
 export enum ECheckType { MANUAL, SOIL_HUMIDITY }
 
-// -----------------------------------------------------------------------------
-
 export function getCatalogEntry(id: string): ICatalogueEntry {
     return storage.get(id);
 }

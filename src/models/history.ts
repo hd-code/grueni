@@ -28,7 +28,7 @@ export function saveHistoryEntry(entry: IHistoryEntry) {
 // -----------------------------------------------------------------------------
 
 const dataDir = path.resolve(__dirname, '..', '..', 'data');
-const filename = 'catalogue.json';
+const filename = 'history.json';
 const filepath = path.join(dataDir, filename);
 
 const storage = LocalStorage<IHistoryEntry>(filepath);

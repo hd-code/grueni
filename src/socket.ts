@@ -1,7 +1,22 @@
-import * as io from 'socket.io';
+import { createSocket } from 'dgram';
 
 // -----------------------------------------------------------------------------
 
-const port = process.env.PORT_RASPI || 4200;
+const socket = createSocket('udp4');
 
-const socket = io.default(port);
+socket.on('listening', () => {
+    const address = socket.address();
+    console.log('UDP Socket listening on port:', address.port, '\n');
+});
+
+socket.on('error', (err) => {
+    console.warn(`UDP Socket error:\n${err.stack}`);
+    socket.close();
+});
+
+socket.on('message', (msg, rinfo) => {
+    // TODO: Add socket handler
+    console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
+});
+
+export default socket;
