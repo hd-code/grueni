@@ -8,13 +8,13 @@ import time
 
 # ------------------------------------------------------------------------------
 
-adc                      = Adafruit_ADS1x15.ADS1115()
-bus                      = smbus.SMBus(1)
+adc = Adafruit_ADS1x15.ADS1115()
+bus = smbus.SMBus(1)
 
 DEVICE                   = 0x23 # Default device I2C address
 ONE_TIME_HIGH_RES_MODE_1 = 0x20 # Start measurement at 1lx resolution. Time typically 120ms
 
-UDP_IP = "127.0.0.1"
+UDP_IP   = "127.0.0.1"
 UDP_PORT = 4200
 
 # ------------------------------------------------------------------------------
@@ -59,4 +59,4 @@ def main():
         print jsonData
 
 if __name__=="__main__":
-   main()
+    main()
