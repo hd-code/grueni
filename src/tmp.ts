@@ -1,5 +1,3 @@
-
-
-function getInitData<T>(): any {
+export function getInitData<T>(): any {
     return {payload: "Es klappt"};
 }

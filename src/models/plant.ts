@@ -6,7 +6,7 @@ import { LocalStorage } from '../util/storage-local';
 
 export interface IPlant {
     name: string;
-    species: string;
+    species: string; // foreign key in catalogue
     pot: number;
     plantedAt: number;
     replantedAt: number|null;
