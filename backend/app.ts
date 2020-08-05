@@ -25,7 +25,7 @@ app.use('/assets', express.static(assetsDir, { fallthrough: false }));
 // Backend API
 
 app.get('/api', (_, res) => {
-    res.send({data: 'nicer content'});
+    res.send({airHumidity: 54, brightness: 1200, temperature: 24});
 });
 
 // -----------------------------------------------------------------------------

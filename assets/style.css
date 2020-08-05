@@ -3,7 +3,8 @@
     font-size: 1em;
 }
 
-html,body {
+html,body,#root {
     height: 100%;
+    overflow: hidden;
     width: 100%;
 }
