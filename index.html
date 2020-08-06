@@ -7,12 +7,12 @@
 
   <link rel="stylesheet" href="assets/style.css">
 
-  <!-- AFrame, AR.js + own components -->
+  <!-- AFrame & AR.js -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
-  <script src="assets/arclick.js"></script>
+  <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script> -->
+  <!-- <script src="assets/arclick.js"></script> -->
 
-  <!-- Vue.js -->
+  <!-- Vue.js & own components -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   <script src="assets/components.js"></script>
 </head>
@@ -21,24 +21,31 @@
     <test name="Hannes" fstyle="italic"></test>
 
     <a-scene embedded vr-mode-ui="enabled: false">
-      <a-image src="assets/hiro.png"></a-image>
-      <!-- <a-sky color="#aaaaff"></a-sky> -->
+      <a-image src="assets/hiro.png" rotation="-90"></a-image>
+      <a-sky color="#aaaaff"></a-sky>
 
       <!-- camera and cursor for click events -->
-      <a-entity camera position="0 3 8" cursor="rayOrigin: mouse"
-        raycaster="far: 1000; interval: 10; objects: [arclick]"></a-entity>
+      <a-entity camera position="0 2 4" cursor="rayOrigin: mouse"
+        raycaster="far: 1000; interval: 10; objects: .clickable"></a-entity>
 
-      <a-marker>
+      <!-- <a-marker> -->
 
-      <a-entity id="topbar" position="0 5 0">
-        <ar-button :text="'Helligkeit: '+brightness+' lm'" position="-3 0 0"></ar-button>
-        <ar-button :text="'Luftfeuchtigkeit: '+airHumidity+'%'" position="0 0 0"></ar-button>
-        <ar-button :text="'Temperatur: '+temperature+' °C'" position="3 0 0"></ar-button>
+      <a-entity id="topbar" position="0 5 -2">
+        <a-button :text="'Helligkeit: '+brightness+' lm'" position="-3 0 0"></a-button>
+        <a-button :text="'Luftfeuchtigkeit: '+airHumidity+'%'" position="0 0 0"></a-button>
+        <a-button :text="'Temperatur: '+temperature+' °C'" position="3 0 0"></a-button>
       </a-entity>
 
-      <a-cone position="-3 0 -2" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
+      <a-entity id="plant1" position="-3 0 -2">
+        <a-button v-for="option in options"
+          :click="option.click" :position="option.position" :text="option.text"
+          scale="0.7"
+        ></a-button>
+        <a-cone position="0 0 -1" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
+      </a-entity>
 
-      </a-marker>
+
+      <!-- </a-marker> -->
     </a-scene>
   </div>
 
