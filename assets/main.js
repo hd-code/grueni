@@ -9,13 +9,17 @@ const root = new Vue({
         temperature: 0,
         airHumidity: 0,
         options: [
-            { click: testFunc, text: 'Option 1' },
-            { click: testFunc, text: 'Option 2' },
+            { click: testFunc, text: 'Giessen' },
+            { click: testFunc, text: 'Details zur Pflanze' },
             { click: testFunc, text: 'Option 3' },
             { click: testFunc, text: 'Option 4' },
             { click: testFunc, text: 'Option 5' },
-            { click: testFunc, text: 'Option 6' },
-            { click: testFunc, text: 'Option 7' },
+            // { click: testFunc, text: 'Option 6' },
+            // { click: testFunc, text: 'Option 7' },
         ],
+        showPopup: true,
+        popupContent: `
+        <iframe src="https://de.wikipedia.org/wiki/Tomate" referrerpolicy="same-origin"></iframe>
+`,
     },
 });

@@ -23,16 +23,17 @@ Vue.component('a-button', {
 Vue.component('a-plant', {
     data: function() { return {
         buttonPositions: [
-            '-2 3 0',
-            '1.3 3.6 0', 
-            '1.6 1.9 0', 
-            '-0.6 4.1 0',
-            '-1.5 1.5 0', // more button
+            '-1.8 3 0',
+            '1.9 3.6 0', 
+            '2.2 1.9 0', 
+            '0 4.1 0',
+            '-1.3 1.5 0', // more button
         ],
         buttonScale: 0.7,
         moreButtonText: '...',
         optionsPerPage: 4,
         page: 0,
+        showOptions: false,
     }},
     computed: {
         lastPageNumber: function() {
@@ -46,19 +47,35 @@ Vue.component('a-plant', {
     },
     props: ['options', 'position'],
     template: `<a-entity id="plant1" :position="position">
-        <a-button v-for="(option, index) in optionsOnPage"
-            :text="option.text" :click="option.click"
-            :position="buttonPositions[index]" :scale="buttonScale"
-        ></a-button>
+        <a-entity v-if="showOptions">
+            <a-button v-for="(option, index) in optionsOnPage"
+                :text="option.text" :click="option.click"
+                :position="buttonPositions[index]" :scale="buttonScale"
+            ></a-button>
 
-        <a-button v-if="options.length > optionsPerPage"
-            :text="moreButtonText" :scale="buttonScale"
-            :click="function() {page = page >= lastPageNumber ? 0 : page + 1}"
-            :position="buttonPositions[optionsPerPage]"
-        ></a-button>
+            <a-button v-if="options.length > optionsPerPage"
+                :text="moreButtonText" :scale="buttonScale"
+                :click="function() {page = page >= lastPageNumber ? 0 : page + 1}"
+                :position="buttonPositions[optionsPerPage]"
+            ></a-button>
+        </a-entity>
 
-        <a-cone position="0 0 -1.5" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
+        <a-cone
+            @click="function() {showOptions = !showOptions}"
+            class="clickable"
+            position="0 0 -1.5" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"
+        ></a-cone>
     </a-entity>`,
+});
+
+Vue.component('popup', {
+    data: function() { return {
+        show: true,
+    }},
+    props: ['content', 'show'],
+    template: `<div class="popup">
+    
+    </div>`,
 });
 
 
