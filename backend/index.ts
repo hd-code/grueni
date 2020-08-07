@@ -7,11 +7,15 @@ import socket from './socket';
 // -----------------------------------------------------------------------------
 
 const portApi   = process.env.PORT || 8080; // default port is 8080
-const portRaspi = process.env.PORT_RASPI || 4200; // default port is 4200
+
+const raspi = {
+    addr: process.env.RASPI_ADDR || '127.0.0.1',
+    port: parseInt(process.env.RASPI_PORT) || 4200,
+};
 
 // -----------------------------------------------------------------------------
 
-socket.bind(portRaspi as number);
+socket.bind(raspi.port, raspi.addr);
 
 server.listen(portApi, () => {
     const siteURL = 'https://' + os.hostname() + ':' + portApi;

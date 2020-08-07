@@ -7,7 +7,7 @@ Vue.component('a-button', {
     props: ['click', 'position', 'scale', 'text'],
     template: `<a-entity :position="position" :scale="scale ? scale+' '+scale+' '+scale : ''">
         <a-entity
-            @mouseup="click" class="clickable"
+            @mouseup="click" :class="{clickable: click}"
             :scale="width+' '+height+' 1'"
             geometry="primitive: circle; radius: 0.5;"
             material="color: #6EBAA7; transparent: true; opacity: 0.8"

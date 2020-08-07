@@ -5,8 +5,10 @@ import { createSocket } from 'dgram';
 const socket = createSocket('udp4');
 
 socket.on('listening', () => {
-    const address = socket.address();
-    console.log('UDP Socket listening on port:', address.port, '\n');
+    const { address, port } = socket.address();
+    console.log('UDP Socket listening on:', address + ':' + port);
+    console.log('Sending own ip address to raspi\n');
+    socket.send('connect', port + 1, address, e => e && console.warn(e));
 });
 
 socket.on('error', (err) => {

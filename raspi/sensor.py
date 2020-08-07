@@ -1,10 +1,6 @@
 import Adafruit_ADS1x15
 import Adafruit_DHT
-import json
 import smbus
-import socket
-import sys
-import time
 
 # ------------------------------------------------------------------------------
 
@@ -13,9 +9,6 @@ bus = smbus.SMBus(1)
 
 DEVICE                   = 0x23 # Default device I2C address
 ONE_TIME_HIGH_RES_MODE_1 = 0x20 # Start measurement at 1lx resolution. Time typically 120ms
-
-UDP_IP   = "127.0.0.1"
-UDP_PORT = 4200
 
 # ------------------------------------------------------------------------------
 
@@ -33,6 +26,8 @@ def readAirHumidityAndTemperature():
     airHumidity, temperature = Adafruit_DHT.read_retry(22, 4) # DHT 22, GPIO 4
     return (airHumidity, temperature)
 
+# ------------------------------------------------------------------------------
+
 def getData():
     airHumidity, temperature = readAirHumidityAndTemperature()
     return {
@@ -47,16 +42,3 @@ def getData():
             },
         ]
     }
-
-# ------------------------------------------------------------------------------
-
-def main():
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    while True:
-        data = getData()
-        jsonData = json.dumps(data)
-        sock.sendto(jsonData, (UDP_IP, UDP_PORT))
-        print jsonData
-
-if __name__=="__main__":
-    main()
