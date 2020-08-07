@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grüni</title>
 
-    <title>Grueni</title>
+  <link rel="stylesheet" href="assets/style.css">
 
-    <link rel="stylesheet" href="assets/style.css">
+  <!-- AFrame & AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script> -->
+  <!-- <script src="assets/arclick.js"></script> -->
 
-    <!-- Importing all scripts -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
-    <script src="assets/arclick.js"></script>
-
-    <script src="assets/test.js"></script>
+  <!-- Vue.js & own components -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  <script src="assets/components.js"></script>
 </head>
 <body>
+  <div id="root">
+    <test name="Hannes" fstyle="italic"></test>
+
     <a-scene embedded vr-mode-ui="enabled: false">
-        <!-- Assets - will be preloaded on page load -->
-        <a-assets id="assets">
-            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-        </a-assets>
+      <a-image src="assets/hiro.png" rotation="-90"></a-image>
+      <a-sky color="#aaaaff"></a-sky>
 
-        <!-- camera and cursor for click events -->
-        <a-entity camera cursor="rayOrigin: mouse" raycaster="far: 1000; interval: 10; objects: [arclick]"></a-entity>
+      <!-- camera and cursor for click events -->
+      <a-entity camera position="0 2 4" cursor="rayOrigin: mouse"
+        raycaster="far: 1000; interval: 10; objects: .clickable"></a-entity>
 
-        <!-- AR-Elements should be placed inside the marker -->
-        <a-marker id="elements">
+      <!-- <a-marker> -->
 
-            <!-- This is just an example element, please replace this soon! --->
-            <a-box arclick="testFunc" position="0 0 0" src="#boxTexture"></a-box>
-            <!----------------------------------------------------------------->
+      <a-entity id="topbar" position="0 5 -2">
+        <a-button :text="'Helligkeit: '+brightness+' lm'" position="-3 0 0"></a-button>
+        <a-button :text="'Luftfeuchtigkeit: '+airHumidity+'%'" position="0 0 0"></a-button>
+        <a-button :text="'Temperatur: '+temperature+' °C'" position="3 0 0"></a-button>
+      </a-entity>
 
-        </a-marker>
+      <a-plant :options="options" position="-3 0 -2"></a-plant>
+
+      <!-- <a-entity id="plant1" position="-3 0 -2">
+        <a-button v-for="option in options"
+          :click="option.click" :position="option.position" :text="option.text"
+          scale="0.7"
+        ></a-button>
+        <a-cone position="0 0 -1" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
+      </a-entity> -->
+
+
+      <!-- </a-marker> -->
     </a-scene>
+  </div>
+
+  <script src="assets/main.js"></script>
 </body>
 </html>

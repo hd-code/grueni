@@ -5,5 +5,8 @@
 node_modules
 package-lock.json
 
+# python
+*.pyc
+
 # Windows
 Thumbs.db
