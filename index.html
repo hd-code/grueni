@@ -36,13 +36,15 @@
         <a-button :text="'Temperatur: '+temperature+' °C'" position="3 0 0"></a-button>
       </a-entity>
 
-      <a-entity id="plant1" position="-3 0 -2">
+      <a-plant :options="options" position="-3 0 -2"></a-plant>
+
+      <!-- <a-entity id="plant1" position="-3 0 -2">
         <a-button v-for="option in options"
           :click="option.click" :position="option.position" :text="option.text"
           scale="0.7"
         ></a-button>
         <a-cone position="0 0 -1" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
-      </a-entity>
+      </a-entity> -->
 
 
       <!-- </a-marker> -->
