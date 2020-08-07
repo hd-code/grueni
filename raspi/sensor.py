@@ -1,6 +1,7 @@
 import Adafruit_ADS1x15
 import Adafruit_DHT
 import smbus
+import time
 
 # ------------------------------------------------------------------------------
 

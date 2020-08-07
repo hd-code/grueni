@@ -11,7 +11,7 @@ def getRandom(max):
 # ------------------------------------------------------------------------------
 
 def getData():
-    time.sleep(0.2)
+    time.sleep(0.5)
     return {
         'timestamp': time.time(),
         'airHumidity': getRandom(100),
