@@ -32,7 +32,7 @@ function getTSOneDayAgo(): number {
 
 function getChartEntries(projection: (entry: IHistoryEntry) => IChartEntry): IChartEntry[] {
     const ts = getTSOneDayAgo();
-    const entries = getHistoryAfterTS(ts);
+    const entries = getHistoryAfterTS(0); // Just for testing
     return entries.map(projection);
 }
 
