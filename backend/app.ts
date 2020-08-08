@@ -3,7 +3,6 @@ import * as path from 'path';
 
 // -----------------------------------------------------------------------------
 
-const assetsDir = path.join(__dirname, '..', 'assets');
 const app = express();
 
 // Logger
@@ -19,8 +18,10 @@ app.use((req, _, next) => {
 
 // Frontend - Home and Assets Directory
 
-app.get('/', (_, res) => res.sendFile(path.resolve(__dirname, '..', 'index.html')));
-app.use('/assets', express.static(assetsDir, { fallthrough: false }));
+const frontendDir = path.join(__dirname, '..', 'frontend');
+
+app.get('/', (_, res) => res.sendFile(path.join(frontendDir, 'index.html')));
+app.use('/assets', express.static(path.join(frontendDir, 'assets'), { fallthrough: false }));
 
 // Backend API
 
