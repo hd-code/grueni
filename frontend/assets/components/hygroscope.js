@@ -20,14 +20,13 @@ Vue.component('a-hygroscope', {
         }
     },
     template: `<a-entity
-        :position="position"
-        :geometry="'primitive: cylinder; radius: ' + radius + '; height: ' + height"
-        material="color: #fff; opacity: 0.1"
-    >
-        <a-entity
-            :geometry="'primitive: cylinder; radius: ' + (radius - radiusDiff) + '; height: ' + fillHeight"
-            :material="'color: ' + (fluidLevel < optimumFluidLevel ? color : colorOpt)"
-            :position="'0 ' + yPosition + ' 0'"
-        ></a-entity>
-    </a-entity>`
+                    :position="position"
+                    :geometry="'primitive: cylinder; radius: ' + radius + '; height: ' + height"
+                    material="color: #fff; opacity: 0.1">
+                    <a-entity
+                        :geometry="'primitive: cylinder; radius: ' + (radius - radiusDiff) + '; height: ' + fillHeight"
+                        :material="'color: ' + (fluidLevel < optimumFluidLevel ? color : colorOpt)"
+                        :position="'0 ' + yPosition + ' 0'"
+                    ></a-entity>
+                </a-entity>`
 });
