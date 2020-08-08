@@ -33,6 +33,7 @@ Vue.component('a-plant', {
     template: `<a-entity :position="position">
         <a-button v-for="(option, index) in optionsOnPage"
             :text="option.text" :click="option.click"
+            :state="option.state"
             :position="buttonPositions[index]" :scale="buttonScale"
         ></a-button>
 
