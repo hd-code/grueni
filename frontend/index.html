@@ -31,23 +31,23 @@
 
       <!-- <a-marker> -->
 
-      <a-entity id="topbar" position="0 5 -2">
-        <a-button :text="'Helligkeit: '+brightness+' lm'" position="-3 0 0"></a-button>
-        <a-button :text="'Luftfeuchtigkeit: '+airHumidity+'%'" position="0 0 0"></a-button>
-        <a-button :text="'Temperatur: '+temperature+' °C'" position="3 0 0"></a-button>
+      <a-entity id="topbar" position="0 5 -2" v-show="topbar.show">
+        <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lm'"></a-button>
+        <a-button position=" 0.0 0 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'"></a-button>
+        <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ '°C'"></a-button>
       </a-entity>
 
-      <a-hygroscope fluid-level="32" optimum-fluid-level="70" position="-1 1 0"></a-hygroscope>
-      <a-hygroscope fluid-level="54" optimum-fluid-level="70" position="0 1 0"></a-hygroscope>
-      <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope>
+      <!-- <a-hygroscope fluid-level="32" optimum-fluid-level="70" position="-1 1 0"></a-hygroscope> -->
+      <!-- <a-hygroscope fluid-level="54" optimum-fluid-level="70" position="0 1 0"></a-hygroscope> -->
+      <!-- <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope> -->
 
-      <a-plant :options="options" position="-3 0 -2"></a-plant>
+      <!-- <a-plant :options="options" position="-3 0 -2"></a-plant> -->
 
-      <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog>
+      <!-- <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog> -->
       <!-- </a-marker> -->
     </a-scene>
 
-    <!-- <popup :content="popupContent"></popup> -->
+    <popup :content="popup.content" :exit="popup.exit"></popup>
   </div>
 
   <script src="assets/main.js"></script>

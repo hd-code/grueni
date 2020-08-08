@@ -1,6 +1,8 @@
 import express from 'express';
 import * as path from 'path';
 
+import * as history from './controller/history';
+
 // -----------------------------------------------------------------------------
 
 const app = express();
@@ -29,6 +31,22 @@ app.use('/assets', express.static(path.join(frontendDir, 'assets'), { fallthroug
 
 app.get('/api', (_, res) => {
     res.send({airHumidity: 54, brightness: 1200, temperature: 24});
+});
+
+app.get('/api/history/air', (_, res) => {
+    const result = history.getAirHum();
+    console.log(result);
+    res.send(result);
+});
+
+app.get('/api/history/light', (_, res) => {
+    const result = history.getLight();
+    res.send(result);
+});
+
+app.get('/api/history/temperature', (_, res) => {
+    const result = history.getTemp();
+    res.send(result);
 });
 
 // -----------------------------------------------------------------------------

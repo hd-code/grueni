@@ -1,25 +1,45 @@
-function testFunc() {
-    alert('Please do not hit me too hard!');
+const appData = {
+    dialog: {
+        content: undefined, // insert text here to be shown in the dialog box
+    },
+    topbar: {
+        show: true,
+        air:   { click: null, value: 0 },
+        light: { click: null, value: 0 },
+        temp:  { click: null, value: 0 },
+    },
+    popup: {
+        content: undefined, // insert html here, then the popup will show up, remove the content and it disappears
+        exit:    undefined, // pass a custom function here that is called, when the user clicks the exit popup
+    }
+};
+
+// -----------------------------------------------------------------------------
+
+async function openHistory(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    appData.popup = data;
 }
 
-const root = new Vue({
-    el: '#root',
-    data: {
-        brightness: 0,
-        temperature: 0,
-        airHumidity: 0,
-        options: [
-            { click: testFunc, text: 'Giessen' },
-            { click: testFunc, text: 'Details zur Pflanze' },
-            { click: testFunc, text: 'Option 3' },
-            { click: testFunc, text: 'Option 4' },
-            { click: testFunc, text: 'Option 5' },
-            // { click: testFunc, text: 'Option 6' },
-            // { click: testFunc, text: 'Option 7' },
-        ],
-        showPopup: true,
-        popupContent: `
-        <iframe src="https://de.wikipedia.org/wiki/Tomate" referrerpolicy="same-origin"></iframe>
-`,
-    },
-});
+appData.general.air.click   = () => openHistory('api/history/air');
+appData.general.light.click = () => openHistory('api/history/light');
+appData.general.temp.click  = () => openHistory('api/history/temperature');
+
+// -----------------------------------------------------------------------------
+
+async function loadData() {
+    const response = await fetch('api');
+    const data = await response.json();
+    
+    appData.general.air.value   = data.airHumidity;
+    appData.general.light.value = data.brightness;
+    appData.general.temp.value  = data.temperature;
+}
+
+loadData();
+setInterval(loadData, 10000); // refresh data every 10 seconds
+
+// -----------------------------------------------------------------------------
+
+const root = new Vue({ el: '#root', data: appData });

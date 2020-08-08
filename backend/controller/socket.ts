@@ -1,5 +1,5 @@
-import { IHistoryEntry, isHistoryEntry, isNewerEntry } from '../models/history';
 import { getLatestHistoryEntry } from './storage';
+import { IHistoryEntry, isHistoryEntry, isNewerEntry } from '../models/history';
 
 // -----------------------------------------------------------------------------
 
