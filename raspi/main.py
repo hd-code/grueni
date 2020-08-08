@@ -1,4 +1,5 @@
 import json
+import os
 import socket
 import sys
 import threading
@@ -13,8 +14,8 @@ else:
 
 # ------------------------------------------------------------------------------
 
-UDP_ADDR = "HDs-MacBook-Pro.fritz.box"
-UDP_PORT = 4200
+UDP_ADDR = os.getenv("ADDR", "HDs-MacBook-Pro.fritz.box")
+UDP_PORT = os.getenv("PORT", 4200)
 
 # ------------------------------------------------------------------------------
 

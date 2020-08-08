@@ -1,4 +1,5 @@
 import { createSocket } from 'dgram';
+import { handleMessage } from './controller/socket';
 
 // -----------------------------------------------------------------------------
 
@@ -15,8 +16,13 @@ socket.on('error', (err) => {
 });
 
 socket.on('message', (msg, rinfo) => {
-    // TODO: Add socket handler
-    console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
+    const log = {
+        addr: rinfo.address,
+        port: rinfo.port,
+        type: 'UDP',
+    };
+    console.log(log);
+    handleMessage(msg);
 });
 
 // -----------------------------------------------------------------------------

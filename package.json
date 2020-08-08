@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "make:ssl": "openssl req -nodes -new -x509 -days 1024 -keyout ssl/server.key -out ssl/server.cert",
-    "raspi": "python raspi/main.py mock",
+    "raspi": "ADDR=127.0.0.1 python raspi/main.py mock",
     "start": "ts-node backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
