@@ -1,15 +1,16 @@
 Vue.component('popup', {
-    data: function() { return {
-        show: true,
-    }},
     methods: {
-        toggle: function() {
-            this.show = !this.show;
+        exitClicked: function() {
+            if (!this.exit) {
+                this.content = undefined;
+            } else {
+                this.exit();
+            }
         },
     },
-    props: ['content'],
-    template: `<div v-show="show" class="popup">
-        <p><a @click="toggle">x</a></p>
+    props: [ 'content', 'exit' ],
+    template: `<div v-show="!!content" class="popup">
+        <p><a @click="exitClicked">x</a></p>
         <div v-html="content"></div>
     </div>`,
 });

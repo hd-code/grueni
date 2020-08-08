@@ -20,7 +20,7 @@ def getData():
         'pots': [
             {
                 'soilHumidity': getRandom(100),
-                'size': getRandom(10),
+                'size': 0,
             },
         ]
     }

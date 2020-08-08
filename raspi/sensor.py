@@ -21,7 +21,7 @@ def readLight():
 def readSoilHumidity():
     data = adc.read_adc(0, 2)
     result = ((data - 18600) / 100) / 1.48
-    return result
+    return 100 - result # sensor returns the drought level
 
 def readAirHumidityAndTemperature():
     airHumidity, temperature = Adafruit_DHT.read_retry(22, 4) # DHT 22, GPIO 4
@@ -39,7 +39,7 @@ def getData():
         'pots': [
             {
                 'soilHumidity': readSoilHumidity(),
-                'size': 8,
+                'size': 0,
             },
         ]
     }
