@@ -22,10 +22,10 @@ export function getTemp(): IChartEntry[] {
 
 // -----------------------------------------------------------------------------
 
-const dayMultiplier = 1000 * 60 * 60 * 24;
+const day = 1000 * 60 * 60 * 24;
 
 function getTSOneDayAgo(): number {
-    return new Date(Date.now() - dayMultiplier).getTime();
+    return new Date(Date.now() - day).getTime();
 }
 
 // -----------------------------------------------------------------------------

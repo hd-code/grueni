@@ -1,4 +1,4 @@
-import { getLatestHistoryEntry } from './storage';
+import { getLatestHistoryEntry, saveHistoryEntry } from './storage';
 import { IHistoryEntry, isHistoryEntry, isNewerEntry } from '../models/history';
 
 // -----------------------------------------------------------------------------
@@ -19,3 +19,13 @@ export function handleMessage(message: Buffer) {
 // -----------------------------------------------------------------------------
 
 let currentData: IHistoryEntry = getLatestHistoryEntry();
+
+// -----------------------------------------------------------------------------
+
+const minute = 1000 * 60;
+
+function addToHistory() {
+    saveHistoryEntry(currentData);
+}
+
+setInterval(addToHistory, 15 * minute);

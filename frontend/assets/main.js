@@ -19,12 +19,12 @@ const appData = {
 async function openHistory(url) {
     const response = await fetch(url);
     const data = await response.json();
-    appData.popup = data;
+    appData.popup.content = data;
 }
 
-appData.general.air.click   = () => openHistory('api/history/air');
-appData.general.light.click = () => openHistory('api/history/light');
-appData.general.temp.click  = () => openHistory('api/history/temperature');
+appData.topbar.air.click   = () => openHistory('api/history/air');
+appData.topbar.light.click = () => openHistory('api/history/light');
+appData.topbar.temp.click  = () => openHistory('api/history/temperature');
 
 // -----------------------------------------------------------------------------
 
@@ -32,9 +32,9 @@ async function loadData() {
     const response = await fetch('api');
     const data = await response.json();
     
-    appData.general.air.value   = data.airHumidity;
-    appData.general.light.value = data.brightness;
-    appData.general.temp.value  = data.temperature;
+    appData.topbar.air.value   = data.airHumidity;
+    appData.topbar.light.value = data.brightness;
+    appData.topbar.temp.value  = data.temperature;
 }
 
 loadData();

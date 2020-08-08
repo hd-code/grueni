@@ -35,7 +35,6 @@ app.get('/api', (_, res) => {
 
 app.get('/api/history/air', (_, res) => {
     const result = history.getAirHum();
-    console.log(result);
     res.send(result);
 });
 

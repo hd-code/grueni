@@ -4,6 +4,7 @@ export interface ICatalogEntry {
     minSoilHumidity: number; // in percent
     optSoilHumidity: number; // in percent
     plantingProcess: IPlantingStep[];
+    replantingProcess: IPlantingStep[];
     wikipediaURL: string;
 }
 

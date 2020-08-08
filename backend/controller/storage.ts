@@ -40,9 +40,9 @@ export function getPlants(): (IPlant|null)[] {
     return appData.plants;
 }
 
-export function plant(species: string, pot: number, name?: string): IPlant {
+export function plant(species: string, pot: number): IPlant {
     const plant: IPlant = {
-        name: name || '', species,
+        species,
         plantedAt: Date.now(),
         replantedAt: null,
     };
