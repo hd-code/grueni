@@ -9,7 +9,7 @@ import socket from './socket';
 const portApi   = process.env.PORT || 8080; // default port is 8080
 
 const raspi = {
-    addr: process.env.RASPI_ADDR || '127.0.0.1',
+    addr: process.env.RASPI_ADDR || '0.0.0.0',
     port: parseInt(process.env.RASPI_PORT) || 4200,
 };
 
