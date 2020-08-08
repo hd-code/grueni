@@ -52,13 +52,13 @@ Vue.component('a-dialog', {
                 @click="ok"
                 geometry="primitive: circle; radius: 0.5;" :material="'color: ' + backgroundColor"
                 :material="'color: ' + buttonColor"
-                zOffset="0.1">
-            </a-entity>
+                zOffset="0.1"
+            ></a-entity>
             <a-text
                 :value="buttonText" :color="textColor" :wrap-count="charsPerLine"
-                :height="height - 0.25" :width="width - 0.75">
+                :height="height - 0.25" :width="width - 0.75"
                 align="center" position="0 -0.3 0"
-            </a-text>
+            ></a-text>
         </a-entity>
     </a-entity>`,
 });

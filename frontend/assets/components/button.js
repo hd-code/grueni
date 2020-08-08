@@ -4,7 +4,7 @@ Vue.component('a-button', {
         height: 1,
         width: 3,
         colors: {
-            ok: '#6EBAA7',
+            normal: '#6EBAA7',
             warning: '#CC3300'
         }
     }},
@@ -13,19 +13,7 @@ Vue.component('a-button', {
             return this.scale + ' ' + this.scale + ' ' + this.scale;
         },
         getColor: function() {
-            console.log(this.state);
-            if(this.state == 'ok')
-            {
-                return this.colors.ok;
-            }
-            else if(this.state == 'warning')
-            {
-                return this.colors.warning;
-            }
-            else
-            {
-                return this.colors.ok;
-            }
+            return this.state === 'warning' ? this.colors.warning : this.colors.normal;
         }
     },
     props: [ 'click', 'position', 'scale', 'text', 'state' ],
@@ -34,8 +22,8 @@ Vue.component('a-button', {
             @mouseup="click" :class="{clickable: click}"
             :scale="width+' '+height+' 1'"
             geometry="primitive: circle; radius: 0.5;"
-            :material="'color: ' + getColor + '; transparent: true; opacity: 0.8'">
-        </a-entity>
+            :material="'transparent: true; opacity: 0.8; color: ' + getColor"
+        ></a-entity>
         <a-text
             :value="text"
             :height="height" :width="width" :wrap-count="charsPerLine"

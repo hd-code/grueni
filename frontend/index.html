@@ -41,7 +41,10 @@
       <!-- <a-hygroscope fluid-level="54" optimum-fluid-level="70" position="0 1 0"></a-hygroscope> -->
       <!-- <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope> -->
 
-      <!-- <a-plant :options="options" position="-3 0 -2"></a-plant> -->
+      <a-plant v-for="plant of plants"
+        :click="plant.click" :position="plant.position"
+        :options="plant.options" :show-options="plant.showOptions"
+      ></a-plant>
 
       <!-- <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog> -->
       <!-- </a-marker> -->
