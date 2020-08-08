@@ -1,9 +1,3 @@
-import * as path from 'path';
-
-import { LocalStorage } from '../util/storage-local';
-
-// -----------------------------------------------------------------------------
-
 export interface IHistoryEntry {
     timestamp: number; // also used as index in storage
     airHumidity: number; // in Prozent, ganzzahlig
@@ -15,20 +9,16 @@ export interface IHistoryEntry {
     }[];
 }
 
-export function getHistoryAfterTS(timestamp: number): IHistoryEntry[] {
-    const entries = storage.filter(entry => entry.timestamp >= timestamp);
-    return Object.values(entries);
+export function isHistoryEntry(entry: any): entry is IHistoryEntry {
+    return 'timestamp' in entry && typeof entry.timestamp === 'number'
+        && 'airHumidity' in entry && typeof entry.airHumidity === 'number'
+        && 'light' in entry && typeof entry.light === 'number'
+        && 'temperature' in entry && typeof entry.temperature === 'number'
+        && 'pots' in entry && Array.isArray(entry.pots) && entry.pots.every(
+            pot => 'soilHumidity' in pot && typeof pot.soilHumidity === 'number'
+        );
 }
 
-export function saveHistoryEntry(entry: IHistoryEntry) {
-    const id = '' + entry.timestamp;
-    storage.set(id, entry);
+export function isNewerEntry(newer: IHistoryEntry, older: IHistoryEntry): boolean {
+    return newer.timestamp >= older.timestamp;
 }
-
-// -----------------------------------------------------------------------------
-
-const dataDir = path.resolve(__dirname, '..', '..', 'data');
-const filename = 'history.json';
-const filepath = path.join(dataDir, filename);
-
-const storage = LocalStorage<IHistoryEntry>(filepath);

@@ -14,6 +14,7 @@
   <!-- Vue.js & own components -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   <script src="assets/components/button.js"></script>
+  <script src="assets/components/dialog.js"></script>
   <script src="assets/components/hygroscope.js"></script>
   <script src="assets/components/plant.js"></script>
   <script src="assets/components/popup.js"></script>
@@ -41,10 +42,12 @@
       <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope>
 
       <a-plant :options="options" position="-3 0 -2"></a-plant>
+
+      <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog>
       <!-- </a-marker> -->
     </a-scene>
 
-    <popup :content="popupContent"></popup>
+    <!-- <popup :content="popupContent"></popup> -->
   </div>
 
   <script src="assets/main.js"></script>

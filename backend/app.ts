@@ -9,6 +9,8 @@ const app = express();
 
 app.use((req, _, next) => {
     const log = {
+        method: req.method,
+        type: 'REST',
         url: req.url,
         userAgent: req.headers["user-agent"]??'unknown device'
     };

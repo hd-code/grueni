@@ -1,0 +1,8 @@
+{
+    "currentData": {
+        "plants": [null],
+        "history": [
+            {"timestamp": 1,"airHumidity": 0,"light": 0,"temperature": 0,"pots": [{"soilHumidity": 0}]}
+        ]
+    }
+}

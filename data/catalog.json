@@ -3,6 +3,7 @@
     "species": "tomato",
     "daysTilReplant": 20,
     "minSoilHumidity": 20,
+    "optSoilHumidity": 70,
     "plantingProcess": [
 
     ],
