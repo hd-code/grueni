@@ -29,6 +29,7 @@ Marker: ![Marker](img/Marker.jpeg)
 
 ![Grafik - Ablauf und Visualisierung](img/AblaufVisualisierung_kompr.jpg)
 
+Alternativ: pdf in Anhang + Verweis darauf
 
 
 https://drive.google.com/drive/folders/1b-I-Ynj_gnzshX2nmXE3F7P9P4ZDIKlV
@@ -39,6 +40,12 @@ Abgrenzung zum IT-Praxisprojekt Dennis
 
 ---
 ## Umsetzung
+
+Zum Testen und Nutzen der Sensoren wurde ein kleines Python Script geschrieben, dass sowohl die Sensoren anspricht als auch deren Daten im Json-Format speichert. 
+
+**Anmerkung zur Abgrenzung zwischen dem Gruppenprojekt "Grüni" und dem IT-Praxisprojekt von Dennis Krischal:**  
+Die Projekte überschneiden sich in genau einem Punkt, da es sich angeboten hat für beide die gleiche Hardware zum Auslesen der Sensoren zu benutzen.
+
 vlg. mit Grafik zur [Richtung des Prototyps](###features1)
 
 Verweis zum Git Repository (+ Installationshinweise?)
