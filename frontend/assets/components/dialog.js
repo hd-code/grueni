@@ -15,7 +15,7 @@ Vue.component('a-dialog', {
         lineBreakCount(str) {
             try 
             {
-                return((str.match(/[^\n]*\n[^\n]*/gi).length));
+                return((str.match(/[^\n]*\n[^\n]*/gi).length) - 1);
             } 
             catch(e) 
             {
