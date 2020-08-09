@@ -16,11 +16,11 @@ socket.on('error', (err) => {
 });
 
 socket.on('message', (msg, rinfo) => {
-    const log = {
-        addr: rinfo.address,
-        port: rinfo.port,
-        type: 'UDP',
-    };
+    // const log = {
+    //     addr: rinfo.address,
+    //     port: rinfo.port,
+    //     type: 'UDP',
+    // };
     // console.log(log);
     handleMessage(msg);
 });

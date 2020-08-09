@@ -10,16 +10,16 @@ const app = express();
 
 // Logger
 
-app.use((req, _, next) => {
-    const log = {
-        method: req.method,
-        type: 'REST',
-        url: req.url,
-        userAgent: req.headers["user-agent"]??'unknown device'
-    };
-    // console.log(log);
-    next();
-});
+// app.use((req, _, next) => {
+//     const log = {
+//         method: req.method,
+//         type: 'REST',
+//         url: req.url,
+//         userAgent: req.headers["user-agent"]??'unknown device'
+//     };
+//     console.log(log);
+//     next();
+// });
 
 // Frontend - Home and Assets Directory
 
@@ -48,12 +48,6 @@ app.get('/api/history/light', (_, res) => {
 app.get('/api/history/temperature', (_, res) => {
     const data = history.getTemp();
     res.send(data);
-});
-
-app.post('/api/plants/:potIndex', (req, res) => {
-    const {species} = req.body;
-    
-    res.sendStatus(200);
 });
 
 app.get('/api/plants/:potIndex/soil', (req, res) => {
