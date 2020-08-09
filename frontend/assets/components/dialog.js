@@ -11,13 +11,26 @@ Vue.component('a-dialog', {
         width: 4,
         squareSize: 0.2
     }},
+    methods: {
+        lineBreakCount(str) {
+            try 
+            {
+                return((str.match(/[^\n]*\n[^\n]*/gi).length));
+            } 
+            catch(e) 
+            {
+                return 0;
+            }
+        },
+    },
     computed: {
         calcHeight: function() {
-            this.numOfLines = Math.max(Math.floor(this.text?.length / this.charsPerLine), 1); 
-            this.squareSize = this.numOfLines >= 3 ? 0.35 : 0.2;
-            const factor = this.numOfLines < 5 ? 0.35 : 0.25;
-            let height = this.numOfLines * factor;
-            height += typeof this.callback !== 'undefined' ?  0.3 : 0;
+            this.numOfLines  = Math.max(Math.floor(this.text?.length / this.charsPerLine), 1);
+            this.numOfLines += this.lineBreakCount(this.text);
+            this.squareSize  = this.numOfLines >= 3 ? 0.35 : 0.2;
+            const factor     = this.numOfLines < 5 ? 0.35 : 0.25;
+            let height       = this.numOfLines * factor;
+            height          += typeof this.callback !== 'undefined' ?  0.3 : 0;
 
             return height;
         },
@@ -37,7 +50,7 @@ Vue.component('a-dialog', {
         <a-text
             :value="text"
             :color="textColor" :wrap-count="charsPerLine"
-            align="center" :height="height - 0.25" :width="width - 0.75"
+            align="center" :height="calcHeight - 0.5" :width="width - 0.75"
         ></a-text>
         <a-entity
             :geometry="'primitive: plane; width: ' + squareSize + '; height: ' + squareSize" 
