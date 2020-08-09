@@ -48,8 +48,8 @@ Vue.component('a-plant', {
             ></a-button>
         </a-entity>
 
-        <a-box @click="clickPot" class="clickable"
-            position="0 0 -1.5" :scale="boxScaleInput"
+        <a-box @mouseup="clickPot" class="clickable"
+            position="0 0 -1.5" :scale="boxScaleInput" wireframe="true"
         ></a-box>
     </a-entity>`,
 });

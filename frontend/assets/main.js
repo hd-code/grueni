@@ -1,8 +1,22 @@
+// -----------------------------------------------------------------------------
+// Dialog
+// -----------------------------------------------------------------------------
+
+const dialogs = {
+    home: 'Tippe auf einen Topf, um weitere Optionen zu sehen.',
+    potSelected: 'Tippe erneut auf den Topf, um die Auswahl zu schliessen.',
+    hygroView: 'Giesse deine Pflanze bis der Fuellstand gruen aufleuchtet.\n\nTippe auf die Anzeige zum Verlassen.'
+};
+
+// -----------------------------------------------------------------------------
+// App Data
+// -----------------------------------------------------------------------------
+
 let hygroIntervall;
 
 const appData = {
     dialog: {
-        content: undefined, // insert text here to be shown in the dialog box
+        content: dialogs.home, // insert text here to be shown in the dialog box
     },
     topbar: {
         show: true,
@@ -36,6 +50,8 @@ const appData = {
     }
 };
 
+// -----------------------------------------------------------------------------
+
 function clearPopup() {
     appData.popup.content = undefined;
     appData.popup.exit = clearPopup;
@@ -53,10 +69,12 @@ function potClicked(potI) {
     if (appData.plants[potI].showOptions) {
         appData.topbar.show = true;
         hidePlantOptions();
+        appData.dialog.content = dialogs.home;
     } else {
         appData.topbar.show = false;
         hidePlantOptions();
         appData.plants[potI].showOptions = true;
+        appData.dialog.content = dialogs.potSelected;
     }
 }
 
@@ -64,6 +82,7 @@ function endHygro() {
     clearInterval(hygroIntervall);
     appData.topbar.show = true;
     appData.hygro.show = false;
+    appData.dialog.content = dialogs.home;
 }
 
 // -----------------------------------------------------------------------------
@@ -73,7 +92,7 @@ function endHygro() {
 function drawDiagram(dataset, preparedData) {
     var ctx = document.getElementById('chart-canvas');
 
-    ctx.setAttribute('height', 400);
+    ctx.setAttribute('height', 200);
     ctx.setAttribute('width', 400);
 
     var chart = new Chart(ctx, {
@@ -166,6 +185,7 @@ function startHygro(potI, optFill) {
     hidePlantOptions();
     appData.hygro.optFill = optFill;
     appData.hygro.show = true;
+    appData.dialog.content = dialogs.hygroView;
     hygroIntervall = setInterval(() => updateHygro(potI), 200);
 }
 
@@ -194,6 +214,8 @@ function getOptions(plant, potI) {
 // Init Main
 // -----------------------------------------------------------------------------
 
+const second = 1000;
+
 async function loadData() {
     try {
         const response = await fetch('api');
@@ -213,7 +235,7 @@ async function loadData() {
 }
 
 loadData();
-setInterval(loadData, 10000); // refresh data every 10 seconds
+setInterval(loadData, 10 * second); // refresh data every 10 seconds
 
 // -----------------------------------------------------------------------------
 

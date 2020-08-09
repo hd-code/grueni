@@ -13,7 +13,7 @@ Vue.component('a-dialog', {
     }},
     computed: {
         calcHeight: function() {
-            this.numOfLines = Math.max(Math.floor(this.text.length / this.charsPerLine), 1); 
+            this.numOfLines = Math.max(Math.floor(this.text?.length / this.charsPerLine), 1); 
             this.squareSize = this.numOfLines >= 3 ? 0.35 : 0.2;
             const factor = this.numOfLines < 5 ? 0.35 : 0.25;
             let height = this.numOfLines * factor;
@@ -49,7 +49,7 @@ Vue.component('a-dialog', {
             <a-entity
                 scale="0.8 0.25 1"
                 position="0 -0.3 0"
-                @click="ok"
+                @mouseup="ok"
                 geometry="primitive: circle; radius: 0.5;" :material="'color: ' + backgroundColor"
                 :material="'color: ' + buttonColor"
                 zOffset="0.1"

@@ -33,7 +33,7 @@
 
       <!-- <a-marker> -->
 
-      <a-entity id="topbar" position="0 5 -2" v-show="topbar.show">
+      <a-entity id="topbar" position="0 5 -2" v-if="topbar.show">
         <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lx'"></a-button>
         <a-button position=" 0.0 0 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'"></a-button>
         <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ ' Grad'"></a-button>
@@ -48,7 +48,7 @@
         :options="plant.options" :position="plant.position"
       ></a-plant>
 
-      <!-- <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog> -->
+      <a-dialog :text="dialog.content" position="0 0.1 0.5"></a-dialog>
       <!-- </a-marker> -->
     </a-scene>
 

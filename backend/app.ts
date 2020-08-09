@@ -17,7 +17,7 @@ app.use((req, _, next) => {
         url: req.url,
         userAgent: req.headers["user-agent"]??'unknown device'
     };
-    // console.log(log);
+    console.log(log);
     next();
 });
 
@@ -31,7 +31,7 @@ app.use('/assets', express.static(path.join(frontendDir, 'assets'), { fallthroug
 // Backend API
 
 app.get('/api', (_, res) => {
-    const data = box.getBoxData()
+    const data = box.getBoxData();
     res.send(data);
 });
 
@@ -51,7 +51,6 @@ app.get('/api/history/temperature', (_, res) => {
 });
 
 app.get('/api/plants/:potIndex/soil', (req, res) => {
-    console.log(req.params);
     const potIndex = parseInt(req.params.potIndex);
     const data = box.getSoilHumidity(potIndex);
     res.send({data});
