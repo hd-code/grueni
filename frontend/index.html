@@ -9,6 +9,8 @@
 
   <!-- AFrame & AR.js -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script> -->
 
   <!-- Vue.js & own components -->
@@ -31,10 +33,10 @@
 
       <!-- <a-marker> -->
 
-      <a-entity id="topbar" position="0 5 -2" v-if="topbar.show">
-        <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lm'"></a-button>
+      <a-entity id="topbar" position="0 5 -2" v-show="topbar.show">
+        <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lx'"></a-button>
         <a-button position=" 0.0 0 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'"></a-button>
-        <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ '°C'"></a-button>
+        <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ ' Grad'"></a-button>
       </a-entity>
 
       <a-hygroscope v-if="hygro.show" position="0 1 0" :click="hygro.click"

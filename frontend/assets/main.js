@@ -70,20 +70,83 @@ function endHygro() {
 // Topbar
 // -----------------------------------------------------------------------------
 
-async function openHistory(url) {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        appData.popup.content = data;
-    } catch (e) {
-        console.warn(e);
-        appData.popup.content = '<h2>Ups, da ist etwas schief gegangen.</h2>';
-    }
+function drawDiagram(dataset, preparedData) {
+    var ctx = document.getElementById('chart-canvas');
+
+    ctx.setAttribute('height', 400);
+    ctx.setAttribute('width', 400);
+
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'],
+            datasets: [{
+                label: preparedData.lineDesc,
+                fill: true,
+                borderColor: "#3e95cd",
+                backgroundColor: "#3e95cd",
+                data: dataset
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: preparedData.headline
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    return ctx;
 }
 
-appData.topbar.air.click   = () => openHistory('api/history/air');
-appData.topbar.light.click = () => openHistory('api/history/light');
-appData.topbar.temp.click  = () => openHistory('api/history/temperature');
+async function openHistory(url, handleCase) {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const values = data.map(({ value }) => value);
+
+    var canvas = document.createElement('canvas'); 
+    canvas.setAttribute('id', 'chart-canvas');
+    
+    appData.popup.content = canvas.outerHTML;
+    
+    // prepare data
+    let preparedData = {
+        headline: null,
+        lineDesc: null
+    }
+
+    switch(handleCase)
+    {
+        case 'light':
+            preparedData.headline = 'Licht im Verlauf der letzten 7 Tage';
+            preparedData.lineDesc = 'Helligkeit in lx';
+        break;
+
+        case 'air':
+            preparedData.headline = 'Luftfeuchtigkeit im Verlauf der letzten 7 Tage';
+            preparedData.lineDesc = 'Luftfeuchtigkeit in %';
+        break;
+
+        default:
+            preparedData.headline = 'Temperatur im Verlauf der letzten 7 Tage';
+            preparedData.lineDesc = 'Temperatur in °C';
+        break;
+    }
+
+    setTimeout(() => drawDiagram(values, preparedData), 20);
+}
+
+appData.topbar.air.click   = () => openHistory('api/history/air', 'air');
+appData.topbar.light.click = () => openHistory('api/history/light', 'light');
+appData.topbar.temp.click  = () => openHistory('api/history/temperature', 'temperature');
 
 // -----------------------------------------------------------------------------
 // Plants
