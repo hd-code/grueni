@@ -5,7 +5,26 @@
     "minSoilHumidity": 20,
     "optSoilHumidity": 70,
     "plantingProcess": [
-
+      {
+        "instruction": "Feuchtigkeitssensor in den Top legen",
+        "checkType": 0, "checkValue": 0
+      },
+      {
+        "instruction": "Topf zu zwei Dritteln fuellen mit Anzuchterde, Torf-Sand oder Kokoshum",
+        "checkType": 0, "checkValue": 0
+      },
+      {
+        "instruction": "Tomatensamen platzieren",
+        "checkType": 0, "checkValue": 0
+      },
+      {
+        "instruction": "Restlichen Topf mit Erde auffüllen",
+        "checkType": 0, "checkValue": 0
+      },
+      {
+        "instruction": "Giessen",
+        "checkType": 1, "checkValue": 70
+      }
     ],
     "wikipediaURL": "https://de.wikipedia.org/wiki/Tomate"
   }

@@ -50,6 +50,12 @@ app.get('/api/history/temperature', (_, res) => {
     res.send(data);
 });
 
+app.post('/api/plants/:potIndex', (req, res) => {
+    const {species} = req.body;
+    
+    res.sendStatus(200);
+});
+
 app.get('/api/plants/:potIndex/soil', (req, res) => {
     const potIndex = parseInt(req.params.potIndex);
     const data = box.getSoilHumidity(potIndex);

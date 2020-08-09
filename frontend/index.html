@@ -24,7 +24,13 @@
 <body>
   <div id="root">
     <a-scene embedded vr-mode-ui="enabled: false">
-      <a-image src="assets/hiro.png" rotation="-90"></a-image>
+      <a-assets>
+        <img id="hiro" src="assets/img/hiro.png">
+        <img id="plante-normal" src="assets/img/plante-normal.png">
+        <img id="plante-shame"  src="assets/img/plante-shame.png">
+      </a-assets>
+
+      <a-image src="#hiro" rotation="-90"></a-image>
       <a-sky color="#aaaaff"></a-sky>
 
       <!-- camera and cursor for click events -->
@@ -39,7 +45,7 @@
         <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ ' Grad'"></a-button>
       </a-entity>
 
-      <a-hygroscope v-if="hygro.show" position="0 1 0" :click="hygro.click"
+      <a-hygroscope v-if="hygro.show" position="0 1.5 0" :click="hygro.click"
         :fluid-level="hygro.fill" :optimum-fluid-level="hygro.optFill"
       ></a-hygroscope>
 
@@ -48,7 +54,7 @@
         :options="plant.options" :position="plant.position"
       ></a-plant>
 
-      <a-dialog :text="dialog.content" position="0 0.1 0.5"></a-dialog>
+      <a-dialog position="0 0.1 0.5" :text="dialog.content" :status="dialog.status"></a-dialog>
       <!-- </a-marker> -->
     </a-scene>
 

@@ -3,9 +3,22 @@
 // -----------------------------------------------------------------------------
 
 const dialogs = {
-    home: 'Tippe auf einen Topf, um weitere Optionen zu sehen.',
-    potSelected: 'Tippe erneut auf den Topf, um die Auswahl zu schliessen.',
-    hygroView: 'Giesse deine Pflanze bis der Fuellstand gruen aufleuchtet.\n\nTippe auf die Anzeige zum Verlassen.'
+    home: {
+        content: 'Tippe auf einen Topf, um weitere Optionen zu sehen.',
+        status: 'normal',
+    },
+    potSelected: {
+        content: 'Tippe erneut auf den Topf, um die Auswahl zu schliessen.',
+        status: 'normal',
+    },
+    hygroView: {
+        content: 'Giesse deine Pflanze bis der Fuellstand gruen aufleuchtet.\n\nTippe auf die Anzeige zum Verlassen.',
+        status: 'normal',
+    },
+    notImplemented: {
+        content: 'Leider funktioniert das noch nicht!',
+        status: 'shame',
+    },
 };
 
 // -----------------------------------------------------------------------------
@@ -15,9 +28,7 @@ const dialogs = {
 let hygroIntervall;
 
 const appData = {
-    dialog: {
-        content: dialogs.home, // insert text here to be shown in the dialog box
-    },
+    dialog: dialogs.home,
     topbar: {
         show: true,
         air:   { click: null, value: 0 },
@@ -69,12 +80,12 @@ function potClicked(potI) {
     if (appData.plants[potI].showOptions) {
         appData.topbar.show = true;
         hidePlantOptions();
-        appData.dialog.content = dialogs.home;
+        appData.dialog = dialogs.home;
     } else {
         appData.topbar.show = false;
         hidePlantOptions();
         appData.plants[potI].showOptions = true;
-        appData.dialog.content = dialogs.potSelected;
+        appData.dialog = dialogs.potSelected;
     }
 }
 
@@ -82,7 +93,7 @@ function endHygro() {
     clearInterval(hygroIntervall);
     appData.topbar.show = true;
     appData.hygro.show = false;
-    appData.dialog.content = dialogs.home;
+    appData.dialog = dialogs.home;
 }
 
 // -----------------------------------------------------------------------------
@@ -172,7 +183,9 @@ appData.topbar.temp.click  = () => openHistory('api/history/temperature', 'tempe
 // -----------------------------------------------------------------------------
 
 function notImplemented() {
-    alert('Dieses Feature ist noch nicht implementiert worden.');
+    const tmp = appData.dialog;
+    appData.dialog = dialogs.notImplemented;
+    setTimeout(() => appData.dialog = tmp, 700);
 }
 
 async function updateHygro(potI) {
@@ -185,8 +198,12 @@ function startHygro(potI, optFill) {
     hidePlantOptions();
     appData.hygro.optFill = optFill;
     appData.hygro.show = true;
-    appData.dialog.content = dialogs.hygroView;
+    appData.dialog = dialogs.hygroView;
     hygroIntervall = setInterval(() => updateHygro(potI), 200);
+}
+
+function doPlanting(steps) {
+
 }
 
 function openWiki(url) {

@@ -6,6 +6,8 @@ Vue.component('a-dialog', {
         buttonColor: '#6EBAA7',
         buttonText: 'OK!',
         scale: '0.5 1 2',
+        imgSize: 0.7,
+        imgOffset: 0.45,
         numOfLines: 1,
         height: 1,
         width: 4,
@@ -39,9 +41,12 @@ Vue.component('a-dialog', {
         },
         boxPosition: function() {
             return ((0.25 * this.width) + ' ' + (-0.35 * this.calcHeight) + ' ' + 0);
-        }
+        },
+        plantePosition: function() {
+            return ((0.25 * this.width) + ' ' + (-this.calcHeight / 2 - this.imgOffset) + ' ' + 0);
+        },
     },
-    props: [ 'ok', 'position', 'text' ],
+    props: [ 'ok', 'position', 'status', 'text' ],
     template: `<a-entity :position="position">
         <a-entity
             :scale="calcWidth + ' ' + calcHeight + ' 1'"
@@ -73,5 +78,10 @@ Vue.component('a-dialog', {
                 align="center" position="0 -0.3 0"
             ></a-text>
         </a-entity>
+        <a-image
+            :src="status === 'shame' ? '#plante-shame' : '#plante-normal'"
+            :position="plantePosition"
+            :height="imgSize" :width="imgSize"
+        ></a-image>
     </a-entity>`,
 });
