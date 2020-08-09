@@ -13,7 +13,6 @@ Vue.component('a-button', {
             return this.scale + ' ' + this.scale + ' ' + this.scale;
         },
         getColor: function() {
-            console.log(this.state);
             if(this.state == 'ok')
             {
                 return this.colors.ok;

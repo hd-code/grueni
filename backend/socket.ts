@@ -1,8 +1,6 @@
 import { createSocket } from 'dgram';
 import { handleMessage } from './controller/socket';
 
-import { handleMessage } from './controller/socket';
-
 // -----------------------------------------------------------------------------
 
 const socket = createSocket('udp4');

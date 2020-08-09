@@ -11,6 +11,8 @@ Vue.component('popup', {
     props: [ 'content', 'exit' ],
     template: `<div v-show="!!content" class="popup">
         <p><a @click="exitClicked">x</a></p>
-        <div v-html="content"></div>
+        <div v-html="content">
+            <canvas id="chart"></canvas>
+        </div>
     </div>`,
 });

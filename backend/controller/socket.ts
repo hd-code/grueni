@@ -28,4 +28,4 @@ function addToHistory() {
     saveHistoryEntry(currentData);
 }
 
-setInterval(addToHistory, 15 * minute);
+// setInterval(addToHistory, 15 * minute);
