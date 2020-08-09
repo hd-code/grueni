@@ -1,3 +1,5 @@
+let hygroIntervall;
+
 const appData = {
     dialog: {
         content: undefined, // insert text here to be shown in the dialog box
@@ -22,6 +24,12 @@ const appData = {
             showOptions: false,
         },
     ],
+    hygro: {
+        click: endHygro,
+        fill: 10,
+        optFill: 70,
+        show: false,
+    },
     popup: {
         content: undefined, // insert html here, then the popup will show up, remove the content and it disappears
         exit: clearPopup, // do not alter this !!!
@@ -40,6 +48,8 @@ function hidePlantOptions() {
 }
 
 function potClicked(potI) {
+    endHygro();
+
     if (appData.plants[potI].showOptions) {
         appData.topbar.show = true;
         hidePlantOptions();
@@ -48,6 +58,12 @@ function potClicked(potI) {
         hidePlantOptions();
         appData.plants[potI].showOptions = true;
     }
+}
+
+function endHygro() {
+    clearInterval(hygroIntervall);
+    appData.topbar.show = true;
+    appData.hygro.show = false;
 }
 
 // -----------------------------------------------------------------------------
@@ -77,15 +93,28 @@ function notImplemented() {
     alert('Dieses Feature ist noch nicht implementiert worden.');
 }
 
+async function updateHygro(potI) {
+    const response  = await fetch(`api/plants/${potI}/soil`);
+    const data = await response.json();
+    appData.hygro.fill = data.data;
+}
+
+function startHygro(potI, optFill) {
+    hidePlantOptions();
+    appData.hygro.optFill = optFill;
+    appData.hygro.show = true;
+    hygroIntervall = setInterval(() => updateHygro(potI), 200);
+}
+
 function openWiki(url) {
     appData.popup.content = `<iframe src="${url}"></iframe>`;
 }
 
-function getOptions(plant) {
+function getOptions(plant, potI) {
     if (!plant) {
         return [
-            { click: notImplemented, text: 'Historie', state: '' },
-            { click: notImplemented, text: 'Bepflanzen', state: '' },
+            { click: notImplemented, text: 'Historie' },
+            { click: notImplemented, text: 'Bepflanzen' },
         ];
     }
 
@@ -93,7 +122,7 @@ function getOptions(plant) {
         { text: 'Historie', click: notImplemented },
         { text: 'Standortdaten', click: notImplemented },
         { text: 'Infos zur Pflanze', click: () => openWiki(plant.wikipediaURL) },
-        { text: 'Giessen', click: notImplemented },
+        { text: 'Giessen', click: () => startHygro(potI, plant.optSoilHumidity) },
         { text: 'Umtopfen', click: notImplemented },
     ];
 }
@@ -113,7 +142,7 @@ async function loadData() {
     
         for (let i = 0, ie = data.plants.length; i < ie; i++) {
             const plant = data.plants[i];
-            appData.plants[i].options = getOptions(plant);
+            appData.plants[i].options = getOptions(plant, i);
         }
     } catch (e) {
         console.warn(e);

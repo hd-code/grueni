@@ -8,7 +8,7 @@ Vue.component('a-hygroscope', {
             radiusDiff: 0.01,
         }
     },
-    props: [ 'fluidLevel', 'optimumFluidLevel', 'position' ],
+    props: [ 'click', 'fluidLevel', 'optimumFluidLevel', 'position' ],
     computed: {
         fillHeight: function() {
             const fillLevel = this.fluidLevel / this.optimumFluidLevel;
@@ -19,7 +19,7 @@ Vue.component('a-hygroscope', {
             return (-1 * ((this.height - this.fillHeight) / 2));
         }
     },
-    template: `<a-entity :position="position"
+    template: `<a-entity :position="position" class="clickable" @mouseup="click"
         :geometry="'primitive: cylinder; radius: ' + radius + '; height: ' + height"
         material="color: #fff; opacity: 0.1"
     >

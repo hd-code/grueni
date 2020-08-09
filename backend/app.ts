@@ -17,7 +17,7 @@ app.use((req, _, next) => {
         url: req.url,
         userAgent: req.headers["user-agent"]??'unknown device'
     };
-    console.log(log);
+    // console.log(log);
     next();
 });
 
@@ -48,6 +48,13 @@ app.get('/api/history/light', (_, res) => {
 app.get('/api/history/temperature', (_, res) => {
     const data = history.getTemp();
     res.send(data);
+});
+
+app.get('/api/plants/:potIndex/soil', (req, res) => {
+    console.log(req.params);
+    const potIndex = parseInt(req.params.potIndex);
+    const data = box.getSoilHumidity(potIndex);
+    res.send({data});
 });
 
 // -----------------------------------------------------------------------------

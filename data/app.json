@@ -14,7 +14,7 @@
             "light": 180,
             "temperature": 24,
             "pots": [{
-                "soilHumidity": 73
+                "soilHumidity": 54
             }]
         }]
     }

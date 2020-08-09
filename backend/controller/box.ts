@@ -20,3 +20,8 @@ export function getBoxData() {
 
     return { airHumidity, light, temperature, plants };
 }
+
+export function getSoilHumidity(potIndex: number): number {
+    const data = getCurrentData();
+    return data.pots[potIndex]?.soilHumidity ?? -1;
+}
