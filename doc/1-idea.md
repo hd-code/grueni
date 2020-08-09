@@ -10,6 +10,7 @@ abstract: |
 # Die Idee
 
 Die Idee einer Gärtnerhilfe-Anwendung entstand bereits Anfang April 2020 während des ersten Brainstormings. Im ersten Treffen des Moduls, am 20.04.2020 fanden wir vier - Robert Ackermann, Hannes Dröse, Dennis Krischal und Livia Schumm - uns in einer Projektgruppe zusammen und führten am selben Tag unser erstes Webex-Meeting durch, in dem über verschiedene Ideen beratschlagt wurde. Für die Aufgabenstellung mit dem Motto "Future Interfaces" sollten zwei Teilprojekte abgedeckt werden:
+
 1. Die Entwicklung einer [Vision](#vision), also die Konzeption einer zukunftsweisenden intuitiven Interaktion mit digitalen Inhalten und deren Darstellung in Form eines Visionsvideos
 2. Die Entwicklung eines [Prototyps](#prototyp) dieser Vision, sprich die Ausarbeitung einer interaktiven Anwendung
 
@@ -24,7 +25,8 @@ Der gemeinsame Favorit zeichnete sich im Gespräch jedoch schnell ab und nach ei
 
 ##	Recherche
 
-Der nächste Schritt, nachdem eine Projektrichtung festgesteckt wurde, ist die Recherche in diesem Bereich. Im Fall des Gardenings stellen sich vor allem drei Fragenfelder:  
+Der nächste Schritt, nachdem eine Projektrichtung festgesteckt wurde, ist die Recherche in diesem Bereich. Im Fall des Gardenings stellen sich vor allem drei Fragenfelder:
+
 1. Wie sieht Gärtnern aktuell überhaupt aus, woran besteht Bedarf und in welche Richtung gehen die Trends der Zukunft?
 2. Welche Apps, Anwendungen und Projekte gibt es bereits und welche sind in der Entwicklung?
 3. Wie sehen die technischen Möglichkeiten aus? Welche Sensoren, Messtechniken o.ä. werden in der Landwirtschaft gebraucht oder sind im Garten einsetzbar?
@@ -181,28 +183,23 @@ Die allgemeine Zielgruppe umfasst Privatpersonen, die Interesse am Gärtnern hab
 #### Beispiel-Personas
 Die allgemeine Zielgruppe könnte Personen mit folgenden Steckbriefen enthalten:  
 
-**Jonas:**
-
-- 24 Jahre alt
-- Student
-- interessiert an Nachhaltigkeit und grünen Themen
-- in der Stadt aufgewachsen
-- bisher keinen Bezug zum Gärtnern oder zu Pflanzen, aber Sehnsucht nach Grün und Gartenidylle
-- hat also kaum Erfahrung damit, möchte es aber Lernen und Ausprobieren
-- wenn es ihm gefällt, macht er vielleicht mehr in die Richtung
-- ist technisch komplett ausgestattet mit diversen gängigen Geräten (mobil, aber auch stationäre, smarte Assistenten)
-
-**Martina:**
-
-- 26 Jahre alt
-- hat bereits Erfahrung mit Pflanzen
-- möchte mehr lernen und Garten-Profi werden
-
-**Mike:**
-
-- 34 Jahre alt
-- begeisterter Gärtner mit sehr großem Garten und vielen Pflanzen
-- kann sich gar nicht wirklich um alles kümmern und braucht Hilfe dabei
+- **Jonas:**
+  - 24 Jahre alt
+  - Student
+  - interessiert an Nachhaltigkeit und grünen Themen
+  - in der Stadt aufgewachsen
+  - bisher keinen Bezug zum Gärtnern oder zu Pflanzen, aber Sehnsucht nach Grün und Gartenidylle
+  - hat also kaum Erfahrung damit, möchte es aber Lernen und Ausprobieren
+  - wenn es ihm gefällt, macht er vielleicht mehr in die Richtung
+  - ist technisch komplett ausgestattet mit diversen gängigen Geräten (mobil, aber auch stationäre, smarte Assistenten)
+- **Martina:**
+  - 26 Jahre alt
+  - hat bereits Erfahrung mit Pflanzen
+  - möchte mehr lernen und Garten-Profi werden
+- **Mike:**
+  - 34 Jahre alt
+  - begeisterter Gärtner mit sehr großem Garten und vielen Pflanzen
+  - kann sich gar nicht wirklich um alles kümmern und braucht Hilfe dabei
 
 Der Fokus für das Projekt und das Visionsvideo soll vor allem auf Jonas festgelegt sein.
 
@@ -210,7 +207,7 @@ Der Fokus für das Projekt und das Visionsvideo soll vor allem auf Jonas festgel
 
 Aus der Zielgruppe ergibt sich die Schlussfolgerung ein möglichst Hardware-armes Produkt zu entwickeln, das universell für viele Nutzer einsetzbar ist. Das heißt auf technische Geräte zu setzen, die bereits in jedem Haushalt vorhanden sind. Zurzeit ist dies unbestritten das Smartphone, aber auch erweiternde Smarthome-Geräte halten immer mehr Einzug. Auch wenn sich User Interface und technische Ausstattung stetig wandeln, wird uns auch in Zukunft das Smartphone weiter begleiten, auf diese Annahme setzt Grüni. Die folgende Grafik zeigt den Stand von definierten Soll-Anforderungen vom 29.04.2020 (vgl. mit späterer [Darstellung im Video](###Interaktionsgestaltung) sowie [Umsetzung beim Prototypen](##Umsetzung)):
 
-![Grafik 'Vision vs. Prototyp](img/Projektthema.jpg)
+![Grafik 'Vision vs. Prototyp'](img/Projektthema.jpg)
 
 Abgrenzen von der technischen **Ausstattung zur Analyse** muss man die zur **Versorgung** der Pflanzen. Dies soll mit der Anwendung Grüni zwar möglich sein, aber freiwillig, da weitere Geräteinstallationen dafür nötig sind und der Lern- und Informations-Aspekt im Vordergrund stehen sollen.
 

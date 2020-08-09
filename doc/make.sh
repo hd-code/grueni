@@ -14,3 +14,7 @@ rm *.aux *.log *.out
 pandoc *.md -o text.tex \
 pdflatex -interaction nonstopmode vorlage \
 rm *.aux *.log *.out
+
+pandoc 1-idea.md -o text.tex; \
+pdflatex -interaction nonstopmode vorlage; \
+rm *.aux *.log *.out
