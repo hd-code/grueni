@@ -21,6 +21,7 @@ Unsere Projektidee sollte also sowohl innovativ als auch in Teilaspekten umsetzb
 Der gemeinsame Favorit zeichnete sich im Gespräch jedoch schnell ab und nach einer kurzen Themenabstimmung mit den betreuenden Dozenten stand die Richtung in den Gardening-Bereich also fest.
 
 ##	Recherche 
+
 Der nächste Schritt, nachdem eine Projektrichtung festgesteckt wurde, ist die Recherche in diesem Bereich. Im Fall des Gardenings stellen sich vor allem drei Fragenfelder:  
 1. Wie sieht Gärtnern aktuell überhaupt aus, woran besteht Bedarf und in welche Richtung gehen die Trends der Zukunft?
 2. Welche Apps, Anwendungen und Projekte gibt es bereits und welche sind in der Entwicklung?
@@ -33,8 +34,8 @@ Im Folgenden werden nur einige, wesentliche Aspekte dieser Recherche zusammenget
 Pflanzen Apps: https://app.asana.com/0/1172859492234369/1172897938417707  
 Sensoren und Messtechnik: https://app.asana.com/0/1172859492234369/1172859492239381
 
-
 ### Trends und aktuelle Entwicklung des Gärtnerns
+
 Dass die Beliebtheit von Gärten, Pflanzen und Natur steigt, merkt schon alleine wer sich im eigenen Umfeld umsieht. Zahlreiche Artikel, Blog- und Social Media-Beiträge zeigen die Trends des **Urban Gardening**, des **Urban Jungles**, des **DIY** (Do It Yourself) auf.  
 Laut dem Zukunftsinstitut[^1] ist die Zahl der Menschen mit Garten oder Balkon in Deutschland zwischen 2007 und 2011 von 50 Millionen auf 55 Millionen gestiegen, ebenso sinkt das Durchschnittsalter von Kleingarten-Pächtern stetig ab[^3]. Der Trend geht hin zur Begrünung von Gärten, Balkonen, Terrassen, zur Gründung sowie Nutzung von Gemeinschafts- und Nachbarschaftsgärten, vor allem bei der naturhungrigen Stadtbevölkerung und die Gartenbranche stellt sich langsam auf eine **neue, jüngere Zielgruppe** ein. Die steigende Beliebtheit des Gärtnerns jeglicher Art liegt unter anderem im Ausgleich, das es zum stressigen Stadtalltag bieten kann, aber auch in seiner guten Vereinbarkeit mit dem Nachhaltigkeits-Trend. Verschiedene Faktoren lassen haufenweise individuelle und clevere Ansätze entstehen. Die Nachfrage nach Bio-Produkten und Nutzpflanzen und dafür möglichst einfachen aber möglichst autonomen Systemen ist groß. Der Platzmangel in Städten verlangt z.B. nach vertikalen Lösungen:
 - "Pflanzetageren": Versetzt angeordnete, kleeblattförmige Gefäße, die sich hoch stapeln lassen  
@@ -58,8 +59,8 @@ Aus diesem Beispiel gehen gleich mehrere mögliche Zukunftsaspekte hervor:
 [^2]: Artikel vom 13.07.2017: "Warum wir im Schrebergarten unser Glück finden" - https://www.bento.de/nachhaltigkeit/schrebergarten-warum-gaertnern-hip-ist-a-00000000-0003-0001-0000-000001502495  
 [^3]:Artikel vom 22.11.2017: "Blick in die Zukunft: So leben wir im Garten 2030" - https://taspo.de/kategorien/blick-in-die-zukunft-so-leben-wir-im-garten-2030/  
 
-
 ###	Technisch relevante Daten der Pflanzenwelt
+
 Aufwendige und smarte Technik wird zurzeit vor allem im Großanbau-Rahmen, also in der Landwirtschaft eingesetzt. Das **Digital Farming** hat sowohl in der Tierindustrie als auch im Anbau Einzug gehalten - die Landschaft steckt mitten drin in der Digitalisierung, neudeutsch: **"Smart Farming"**.[^farming1] Für die Landwirte bietet das sowohl Vor- als auch Nachteile, im Hinblick auf ein interaktives Gardening-Projekt sind aber vor allem die technischen Möglichkeiten relevant und was man aus ihrem Einsatz in der Landwirtschaft lernen kann. Allgemein dient Smart Farming der Optimierung von Planung, Effizienz und Ertrag.
 
 **Precision Farming:** Komplettangebote von IT-Konzernen zur Optimierung der Pflanzen für die Weiterverabeitung (z.B. Berechnung des Abstands zwischen Pflanzen, damit sie die richtige Größe bekommen). Mithilfe von Sensoren auf dem Feld und in den Böden, vernetzten Maschinen und entsprechenden Analyse-Softwares, die zusätzlich benötigte Daten, wie Geo- und Wetter-Analysen, mit einbeziehen wird für eine großflächig abdeckende, informationstechnische Infrastruktur gesorgt.[^farming1] 
@@ -87,11 +88,12 @@ Mit dieser Frage beschäftigen sich auch Garten-Dienstleister, Unternehmer und S
 [^farming2]: vgl. Artikel vom 21.07.2020, Link: https://www.computerwoche.de/a/was-sie-ueber-landwirtschaft-4-0-wissen-muessen,3544215
 [^farming3]: vgl. Artikel vom 23.06.2017, Link: https://biooekonomie.de/digitale-landwirtschaft-it-fuer-acker-und-stall
 
-
 ###	Bereits bestehende Projekte
+
 Interaktive, technische Anwendungen im Bereich des Gardening gibt es auch für die Otto-Normalverbrauchenden bereits reichlich in verschiedenen Ausführungen, wenn auch nicht in so ausgefeiltem Stil wie in der Landwirtschaft. Meist greifen sie eine unterschiedliche Auswahl an den im vorigen Abschnitt erläuterten Aspekten auf, man kann sie anhand der Funktionalität jedoch grob unterteilen in visualisierende Planungs-Tools, einfache Erinnerungs-Anwendungen, Pflanzenerkennungs-Apps und smarte, teils automatisierte Beete. Produkte und Projekte gibt es dazu viele, im Folgenden werden zur Verdeutlichung jeweils einige Beispiele vorgestellt.
 
 #### Visualisierungs-Software
+
 - **Garten-Planer:** Beispiel "Home Design 3D Outdoor & Garden"[^homedesign]  
 Eine App, die einen virtuellen Rundgang im eigenen Garten ermöglicht.
 
@@ -103,6 +105,7 @@ Hierbei stehen also drei Aspekte im Vordergrund: Planen, Umsetzen und Lernen anh
 [^alphabeet]: Link: https://www.alphabeet.org/
 
 #### Gieß- und Pflegeerinnerungs-Apps
+
 Dabei handelt es sich um reine Organisations-Tools, in denen man Aufgaben verwalten und Erinnerungen erstellen kann. Sie ermöglichen außerdem Zugriff auf Datenbanken, die dem User nützliche Informationen zu seinen Pflanzen bieten.  
 Beispiele für diese Art App sind:
 - Gardenia (iPhone // Android)
@@ -113,6 +116,7 @@ Beispiele für diese Art App sind:
 - Plant Diary (Android)
 
 #### Pflanzenerkennungs-Apps
+
 Die Hauptfunktion solcher Apps ist die Erkennung von Pflanzen anhand von Fotos. Sie verfügen ebenso über eine Pflanzenenzyklopädie, aus der der User weitere Informationen erlangen kann. Außerdem wird ein Austausch über eine Community ermöglicht, über die die App hauptsächlich funktioniert -  je größer und aktiver die Community desto größer die Datenbank, desto präziser also auch die Bilderkennung.  
 Beispiele für diese Art App sind:
 - PictureThis[^picturethis]
@@ -126,6 +130,7 @@ Beispiele für diese Art App sind:
 [^gardenfloweri]: Link: https://apps.apple.com/us/app/garden-flower-identification-plant-identifier-free/id1128290219  
 
 #### Smarte, automatisierte Beete
+
 1. Beispiel: Start-Up **IP Garten**[^ipgarten]  
 Hierbei handelt es sich um ein Dienstleistungsunternehmen, bei dem man Beete buchen kann. Diese werden live überwacht mittels Kameras und Feuchtigkeitssensoren. Interagiert werden kann von zuhause aus über eine virtuelle Welt auf dem Computer. Eine ferngesteuerte Bewässerung ist für den Kunden möglich, alle weiteren Gärtner-Leistungen werden hinzu gebucht und von Mitarbeitern durchgeführt. Der Ertrag des gebuchten Beetes kann nach der Ernte abgeholt oder geliefert werden. 
 
@@ -143,16 +148,20 @@ Eine zusammengetragene Liste weiterer Cowdfunding Projekte zu dem Thema findet s
 [^asana2]: Link: https://app.asana.com/0/1172859492234369/1172957097729748
 
 ##	Festlegung des Projektrahmens   
+
 Die Absicht entstand, die Vision durch ihren potenziellen Wirkungsraum von den recherchierten Projekten abzugrenzen. 
 Es sollte sich um kein landwirtschaftliches Projekt sondern um eine Anwendung für den Privatgebrauch handeln. In diesem Rahmen sollte sie jedoch so universell wie möglich einsetzbar sein. Es stellte sich also die Frage wie sich möglichst flexible, mobile Systeme mit einer möglichst präzisen, lokalen Daten-Gewinnung gestalten lassen.
 Sind Sensoren unablässig oder lassen sie sich beispielsweise durch Scan-Geräte ersetzen? Was können Scanner zurzeit und was möglicherweise in der Zukunft? Und welche Geräte sind in welchem Rahmen einsetzbar?
 Der erste Schritt, um vor dem Hintergrund dieser Fragestellungen den Projektrahmen zu finden, ist die Erstellung von Zielgruppen Personas. Auf deren Basis können dann die Anforderungen für das Visions-Produkt entstehen.
 
 ### Erstellen von Zielgruppen Personas
+
 #### Zielgruppe allgemein
+
 Die allgemeine Zielgruppe umfasst Privatpersonen, die Interesse am Gärtnern haben. Dadurch, dass Gardening ein Trend-Thema handelt es sich also um eine relativ große, breit gefasste Zielgruppe. Im Fokus soll jedoch das Gärtnern Lernen stehen, das durch Technik unterstützt wird, die beim User bereits vorhanden ist. Der Prozess des Lernens soll dabei definitiv durch angeleitete Tätigkeiten am realen Objekt geschehen, es handelt sich also um kein virtuelles Lerntool.
 
 #### Beispiel-Personas
+
 Die allgemeine Zielgruppe könnte Personen mit folgenden Steckbriefen enthalten:  
 
 **Jonas:**
@@ -175,17 +184,19 @@ Die allgemeine Zielgruppe könnte Personen mit folgenden Steckbriefen enthalten:
 - begeisterter Gärtner mit sehr großem Garten und vielen Pflanzen
 - kann sich gar nicht wirklich um alles kümmern und braucht Hilfe dabei
 
-Der Fokus für das Projekt und das Visionsvideo soll vor allem auf Jonas festgelegt sein.
+Der Fokus für das Visionsvideo soll vor allem auf Jonas festgelegt sein.
 
 ###	Features - Vision vs. grobe Richtung Prototyp {#features1}
+
 Aus der Zielgruppe ergibt sich die Schlussfolgerung ein möglichst Hardware-armes Produkt zu entwickeln, das universell für viele Nutzer einsetzbar ist. Das heißt auf technische Geräte zu setzen, die bereits in jedem Haushalt vorhanden sind. Zurzeit ist dies unbestritten das Smartphone, aber auch erweiternde Smarthome-Geräte halten immer mehr Einzug. Auch wenn sich User Interface und technische Ausstattung stetig wandeln, wird uns auch in Zukunft das Smartphone weiter begleiten, auf diese Annahme setzt Grüni. Die folgende Grafik zeigt den Stand von definierten Soll-Anforderungen vom 29.04.2020 (vgl. mit späterer [Darstellung im Video](###Interaktionsgestaltung) sowie [Umsetzung beim Prototypen](##Umsetzung)):
 
 ![Grafik 'Vision vs. Prototyp](img/Projektthema.jpg)
 
 Abgrenzen von der technischen **Ausstattung zur Analyse** muss man die zur **Versorgung** der Pflanzen. Dies soll mit der Anwendung Grüni zwar möglich sein, aber freiwillig, da weitere Geräteinstallationen dafür nötig sind und der Lern- und Informations-Aspekt im Vordergrund stehen sollen. 
-Für den Prototypen war jedoch bereits zu diesem Zeitpunkt klar, dass wir nicht auf Sensoren verzichten werden können und auch der Wirkungsraum spezifisch eingegrenzt sein wird. Dazu allerdings erst später mehr.
+Für den Prototypen war jedoch bereits zu diesem Zeitpunkt klar, dass wir nicht auf Sensoren verzichten werden können und auch der Wirkungsraum spezifisch eingegrenzt sein wird. Dazu allerdings erst mehr unter dem Punkt [der Prototyp](#prototyp).
 
-##	Aufgetretene Schwierigkeiten und deren Lösungen
+##	Herausforderungen in der Projektfindungssphase
+
 - Masse an Recherche-Material aussortieren und für das Projekt wesentliche Aspekte herausfiltern
 - Anforderungen an das Projekt definieren bei großer Auswahl an Möglichkeiten der Umsetzung
 - Die Innovation nicht aus dem Auge verlieren, klar definieren was "anders" ist an Grüni

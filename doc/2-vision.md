@@ -1,7 +1,7 @@
 # Die Vision {#vision}
 Der Weg durch die Projektfindungsphase führt nun also zur Anwendung "Grüni". Grüni ist ein universelles Hilfstool für Pflanzen, welches im Haus oder Garten Einsatz findet. Sie beherrscht sehr umfangreiche Analysen, Simulationen und Funktionalitäten rund um das Gärtnern. Dabei ist die Größe des Topfes, Beetes oder Gartens sowie die Auswahl der Geräte, auf denen die App funktioniert, komplett variabel und frei. Es kommen sehr ausgefeilte Arten der holografischen Visualisierung zum Einsatz, bis hin zu einem personifizierten Gartengehilfen – PLANT-E. Wobei PLANT-E selbst keine Arbeiten verrichten kann, sondern als holografischer Assistent den Nutzer vor allem durch Prozesse (Eintopfen, Umtopfen etc.) führt oder Erinnerungen gibt.
 
-### Geplante Features und Eigenschaften der Zukunftsvision
+## Geplante Eigenschaften und Features der Zukunftsvision
 
 - Geräteunabhängigkeit  
 → App läuft auf stationären Geräten (z.B. Echo-Dots), mobilen Endgeräten (z.B. Smartphone, Tablet)  
@@ -17,7 +17,7 @@ Der Weg durch die Projektfindungsphase führt nun also zur Anwendung "Grüni". G
 - Analyse der Umgebung via Scan  
 → geeignete Orte für die Pflanzen finden anhand ihrer Art und deren Bedürfnissen
 
-- Beetplanung / Simulation des Pflanzenwachstums innerhalb einer gegebenen Umgebung
+- Beetplanung / Simulation des Pflanzenwachstums innerhalb einer gegebenen Umgebung  
 → holografische Visualisierung von Pflanzen an entsprechenden Stellen inklusive Simulation wie sich die Pflanze dort entwickeln würde
 
 - Pflanzenerkennung  
@@ -63,7 +63,6 @@ Dramaturgisch: Entwicklung findet gleichermaßen zwischen Mensch und App statt
 Verweis ältere Versionen: https://drive.google.com/drive/folders/1toOwAzorJRI8cY0EzBIM56n-LDfFUXsK
 
 ### Interaktionsgestaltung und UI-Design
-https://docs.google.com/document/d/1U0tyraiAKUoylB5gmYOqaIDQtpblvdMzh02Rflr4A3w/edit#
 
 Bei der Entwicklung des Drehbuches wurde bereits schnell deutlich, dass die Interaktionsgestaltung im Fokus der Handlung stehen sollte. Wie die Features der Vision in der Interaktion aussehen, zeigt sich in den folgenden Designentwurf-Skizzen (Stand 26.05.2020) zur Umsetzung in den Szenen:
 
@@ -121,6 +120,7 @@ Anmerkung: konnte aus Platzmangelgründen am Drehort nicht umgesetzt werden
 ### Storyboard und Drehplan
 
 ---
+
 ## Der Dreh
 Datum, Ablauf, Akteure
 
@@ -128,11 +128,11 @@ Datum, Ablauf, Akteure
 ## Nachbearbeitung des Videomaterials
 
 ### Schnitt
-FinalCut Programm, Musik, 
+FinalCut Programm, Musik, Schrift
 ### Animation
 PLANT-E (Quelle angeben! Urheberrechte siehe Video-Abspann)
 ### After Effects
-
+Design, Farben, Schriften
 ---
 ## Fazit zum Ergebnis-Video
 vgl. mit geplante Features
@@ -154,7 +154,5 @@ vgl. mit geplante Features
 - Verdeckungen
 - Taktung am Ende des Videos
 - Soundeffekte ausbauen (z.B. Erscheinen und Verschwinden von PLANT-E)
-
-#### Was beinhaltet die Vision, was den Video-Rahmen gesprengt hätte?
 
 
