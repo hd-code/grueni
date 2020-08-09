@@ -14,8 +14,8 @@ else:
 
 # ------------------------------------------------------------------------------
 
-UDP_ADDR = os.getenv("ADDR", "HDs-MacBook-Pro.fritz.box")
-UDP_PORT = os.getenv("PORT", 4200)
+UDP_ADDR = os.getenv("ADDR", "127.0.0.1")
+UDP_PORT = int(os.getenv("PORT", 4200))
 
 # ------------------------------------------------------------------------------
 
