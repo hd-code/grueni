@@ -1,25 +1,54 @@
 # Die Vision {#vision}
 Der Weg durch die Projektfindungsphase führt nun also zur Anwendung "Grüni". Grüni ist ein universelles Hilfstool für Pflanzen, welches im Haus oder Garten Einsatz findet. Sie beherrscht sehr umfangreiche Analysen, Simulationen und Funktionalitäten rund um das Gärtnern. Dabei ist die Größe des Topfes, Beetes oder Gartens sowie die Auswahl der Geräte, auf denen die App funktioniert, komplett variabel und frei. Es kommen sehr ausgefeilte Arten der holografischen Visualisierung zum Einsatz, bis hin zu einem personifizierten Gartengehilfen – PLANT-E. Wobei PLANT-E selbst keine Arbeiten verrichten kann, sondern als holografischer Assistent den Nutzer vor allem durch Prozesse (Eintopfen, Umtopfen etc.) führt oder Erinnerungen gibt.
 
-### Geplante Features für die Zukunftsvision
-Geräteunabhängig => App läuft auf stationären Geräten (z.B. Echo-Dots), mobilen Endgeräten (z.B. Smartphone, Tablet)
-Geräteübergreifend => Messungen von einem Gerät (steht bei den Pflanzen), Mitteilung des Nutzers über ein anderes Gerät (welches ihm gerade am nächsten ist)
-Nutzung in verschiedensten “Räumen” => drin/draußen, ein paar Töpfe/Beet/ganzer Garten
-Analyse der Umgebung => geeignete Orte für die Pflanzen finden
-Simulation des Pflanzenwachstums innerhalb einer gegebenen Umgebung
-Beetplanung => Visualisierung von Pflanzen an entsprechenden Stellen (holografisch) inklusive Simulation wie sich die Pflanze dort entwickeln würden
-Pflanzenerkennung => Klassifizierung von Pflanzen und Samen
-Bereitstellung von Informationen zur Pflanze
-Bestimmung des Zustands der Pflanze => Alter, Bewässerung, Bodenzustand, Lichtverhältnisse, Reifegrad der Früchte usw.
-Visualisierung dieser Zustandsinformationen (z.B. mit einer Gieß- bzw. Bewässerungsanzeige) => holografisch, symbolisch, auditiv
-Erinnerungsfunktion z.B. ans Gießen, Umtopfen, Rausstellen (z.B. in Form von PLANT-E)
-Vorschläge und Produktempfehlungen => zu den Bedürfnissen der Pflanzen werden die benötigten Tools und Komponenten gleich zur Bestellung angeboten
-der “Lehrmeister” PLANT-E => Personifizierung des Computers für den Menschen, Tipps Erinnerungen und co. werden über PLANT-E dem Nutzer mitgeteilt.
-Fingerabdruck-Scan => zum Autorisieren von Transaktionen
-Gestenerkennung => Greifen (zum Auswählen), leichtes Nicken, Rahmen für einen Schnappschuss setzen
-Sharing-Funktion => Möglichkeit die eigenen Pflanzen mit den Freunden zu teilen, fotobasiert
+### Geplante Features und Eigenschaften der Zukunftsvision
 
----
+- Geräteunabhängigkeit  
+→ App läuft auf stationären Geräten (z.B. Echo-Dots), mobilen Endgeräten (z.B. Smartphone, Tablet)  
+
+- Geräteübergreifend  
+→ Messungen von einem Gerät (steht bei den Pflanzen)  
+→ Mitteilung des Nutzers über ein anderes Gerät (welches ihm gerade am nächsten ist)  
+
+- Nutzung in verschiedensten Umgebungen  
+→ sowie innerhalb als auch außerhalb des Hauses  
+→ ein paar Töpfe / ein Beet/ ein ganzer Garten 
+
+- Analyse der Umgebung via Scan  
+→ geeignete Orte für die Pflanzen finden anhand ihrer Art und deren Bedürfnissen
+
+- Beetplanung / Simulation des Pflanzenwachstums innerhalb einer gegebenen Umgebung
+→ holografische Visualisierung von Pflanzen an entsprechenden Stellen inklusive Simulation wie sich die Pflanze dort entwickeln würde
+
+- Pflanzenerkennung  
+→ Klassifizierung von Pflanzen und Samen via Scan 
+
+- Bereitstellung von Informationen zur Pflanze
+
+- Bestimmung des Zustands der Pflanze  
+→ Alter, Bewässerung, Bodenzustand, Lichtverhältnisse, Reifegrad der Früchte usw.
+
+- Visualisierung dieser Zustandsinformationen (z.B. mit einer Gieß- bzw. Bewässerungsanzeige)  
+→ holografisch, symbolisch, auditiv
+
+- Erinnerungsfunktion z.B. ans Gießen, Umtopfen, Rausstellen (z.B. in Form von PLANT-E)
+
+- Vorschläge und Produktempfehlungen  
+→ entsprechend der aktuellen Bedürfnisse der Pflanzen werden die benötigten Tools und Komponenten direkt zur Bestellung angeboten
+
+- der Lehrmeister **PLANT-E**  
+→ Personifizierung des Computers für den Menschen  
+→ Tipps Erinnerungen und Co. werden dem Nutzer über PLANT-E mitgeteilt
+
+- Fingerabdruck-Scan  
+→ zum Autorisieren von Transaktionen
+
+- Gestenerkennung  
+→ Greifen (zum Auswählen), leichtes Nicken, Rahmen für einen Schnappschuss setzen
+
+- Community-Komponente / Sharing-Funktion  
+→ Möglichkeit die eigenen Pflanzen mit den Freunden zu teilen, fotobasiert
+
 ## Videovorbereitungen
 
 ### Drehbuch
@@ -31,11 +60,13 @@ zum einen soll eine Beratung stattfinden, d.h. virtuelle Simulation der Pflanzen
 Anschließend dann Anweisungen wie alles umgesetzt wird
 Dramaturgisch: Entwicklung findet gleichermaßen zwischen Mensch und App statt
 
+Verweis ältere Versionen: https://drive.google.com/drive/folders/1toOwAzorJRI8cY0EzBIM56n-LDfFUXsK
 
 ### Interaktionsgestaltung und UI-Design
 https://docs.google.com/document/d/1U0tyraiAKUoylB5gmYOqaIDQtpblvdMzh02Rflr4A3w/edit#
 
 Bei der Entwicklung des Drehbuches wurde bereits schnell deutlich, dass die Interaktionsgestaltung im Fokus der Handlung stehen sollte. Wie die Features der Vision in der Interaktion aussehen, zeigt sich in den folgenden Designentwurf-Skizzen (Stand 26.05.2020) zur Umsetzung in den Szenen:
+
 #### Szene 2
 - Verarbeitung von Sprachbefehlen
 - Scannen des Raums, Identifizierung der Gegenstände → Erkennung von Anzuchtkasten und Samen:
@@ -107,13 +138,19 @@ PLANT-E (Quelle angeben! Urheberrechte siehe Video-Abspann)
 vgl. mit geplante Features
 
 ### Aufgetretene Schwierigkeiten
+
+
+| Problemstellung | Lösung und Umsetzung | 
+|--------|--------|
+
 - Prioritätenlegung beim Drehbuch: inwieweit lässt sich in kurzer Zeit eine schöne Geschichte erzählen bei der eine Produktvision mit ihren Features deutlich vermittelt wird? Mehrmalige Absprachen und Überarbeitungen des Drehbuches führten von Version 1 (Anhang) zu Version X (Anhang) --> Asana Protokolle (Grad Interaktionsgestaltung)
 - Interaktionsgestaltung wurde zwar bereits vor dem Dreh bei der Erstellung von Storyboard und Drehplan kommuniziert, skizziert allerdings erst hinterher. Teilweise musste dann mit Bildausschnitten gearbeitet werden, die man noch optimieren hätte können.
 - Storyboard und Drehplan ermöglichten reibungslosen Dreh, dabei wurden jedoch die Kameras fast durchgängig laufen gelassen. Dies geschah der Einfachheit halber da Platzmangel herrschte und die Kameras teilweise schlecht zugängig waren, was für den Moment eine sinnvolle Entscheidung war. Im Nachhinein wurde daraus im Schnitt jedoch ein Batzen Arbeit für den Batz, da eine große Menge an Videomaterial gesichtet und aussortiert werden musste schon alleine für den Rohschnitt.
 - Aus technischen Gründen: Reihenfolge Schnitt, Animation, After Effects nur nacheinander möglich, man konnte nur teilweise parallel an dem Video arbeiten
-- 
+- Rendern --> Klassiker
 
-### Verbesserungsmöglichkeiten
+### Weiter ausbaufähige Aspekte im Video
+- in größerem Zeitrahmen Darstellung weiterer (evtl. aller) Features
 - Verdeckungen
 - Taktung am Ende des Videos
 - Soundeffekte ausbauen (z.B. Erscheinen und Verschwinden von PLANT-E)
