@@ -1,6 +1,7 @@
 import express from 'express';
 import * as path from 'path';
 
+import * as box from './controller/box';
 import * as history from './controller/history';
 
 // -----------------------------------------------------------------------------
@@ -9,16 +10,16 @@ const app = express();
 
 // Logger
 
-app.use((req, _, next) => {
-    const log = {
-        method: req.method,
-        type: 'REST',
-        url: req.url,
-        userAgent: req.headers["user-agent"]??'unknown device'
-    };
-    console.log(log);
-    next();
-});
+// app.use((req, _, next) => {
+//     const log = {
+//         method: req.method,
+//         type: 'REST',
+//         url: req.url,
+//         userAgent: req.headers["user-agent"]??'unknown device'
+//     };
+//     console.log(log);
+//     next();
+// });
 
 // Frontend - Home and Assets Directory
 
@@ -30,22 +31,29 @@ app.use('/assets', express.static(path.join(frontendDir, 'assets'), { fallthroug
 // Backend API
 
 app.get('/api', (_, res) => {
-    res.send({airHumidity: 54, brightness: 1200, temperature: 24});
+    const data = box.getBoxData();
+    res.send(data);
 });
 
 app.get('/api/history/air', (_, res) => {
-    const result = history.getAirHum();
-    res.send(result);
+    const data = history.getAirHum();
+    res.send(data);
 });
 
 app.get('/api/history/light', (_, res) => {
-    const result = history.getLight();
-    res.send(result);
+    const data = history.getLight();
+    res.send(data);
 });
 
 app.get('/api/history/temperature', (_, res) => {
-    const result = history.getTemp();
-    res.send(result);
+    const data = history.getTemp();
+    res.send(data);
+});
+
+app.get('/api/plants/:potIndex/soil', (req, res) => {
+    const potIndex = parseInt(req.params.potIndex);
+    const data = box.getSoilHumidity(potIndex);
+    res.send({data});
 });
 
 // -----------------------------------------------------------------------------
