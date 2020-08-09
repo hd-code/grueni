@@ -31,7 +31,7 @@
 
       <!-- <a-marker> -->
 
-      <a-entity id="topbar" position="0 5 -2" v-show="topbar.show">
+      <a-entity id="topbar" position="0 5 -2" v-if="topbar.show">
         <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lm'"></a-button>
         <a-button position=" 0.0 0 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'"></a-button>
         <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ '°C'"></a-button>
@@ -42,8 +42,8 @@
       <!-- <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope> -->
 
       <a-plant v-for="plant of plants"
-        :click="plant.click" :position="plant.position"
-        :options="plant.options" :show-options="plant.showOptions"
+        :click-pot="plant.clickPot" :show-options="plant.showOptions"
+        :options="plant.options" :position="plant.position"
       ></a-plant>
 
       <!-- <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog> -->

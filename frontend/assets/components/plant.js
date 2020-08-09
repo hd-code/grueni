@@ -8,7 +8,7 @@ Vue.component('a-plant', {
             '-0.5 3.8 0',
             '-1.2 1.4 0', // more button
         ],
-        buttonScale: 0.7,
+        buttonScale: 0.9,
         moreButtonText: '...',
         optionsPerPage: 4,
         page: 0,
@@ -33,9 +33,9 @@ Vue.component('a-plant', {
                 this.page = 0;
         }
     },
-    props: [ 'click', 'options', 'position', 'showOptions' ],
+    props: [ 'clickPot', 'options', 'position', 'showOptions' ],
     template: `<a-entity :position="position">
-        <a-entity v-show="showOptions">
+        <a-entity v-if="showOptions">
             <a-button v-for="(option, index) in optionsOnPage"
                 :text="option.text" :click="option.click" :state="option.state"
                 :position="buttonPositions[index]" :scale="buttonScale"
@@ -48,7 +48,7 @@ Vue.component('a-plant', {
             ></a-button>
         </a-entity>
 
-        <a-box @click="click" class="clickable"
+        <a-box @click="clickPot" class="clickable"
             position="0 0 -1.5" :scale="boxScaleInput"
         ></a-box>
     </a-entity>`,

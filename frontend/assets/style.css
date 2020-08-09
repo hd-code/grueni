@@ -20,6 +20,13 @@ a {
     cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+h1 {font-size: 2.0em}
+h2 {font-size: 1.6em}
+h3 {font-size: 1.2em}
+
 iframe {
     border: none;
     height: 100%;
