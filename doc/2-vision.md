@@ -101,7 +101,7 @@ Bei der Entwicklung des Drehbuches wurde bereits schnell deutlich, dass die Inte
 - Erinnerungsfunktion → in dem Fall zum Umtopfen
 - Analyse der benötigten Utensilien und Angebot, dieselbigen zu bestellen
 - Fingerabdruck-Scanner zur Autorisierung der Bestellung
-![Fingerabdruck-Scan](img/UI/Badansicht.png)
+![Fingerabdruck-Scan](img/UI/Badansicht.jpg)
 
 #### Szene 5
 - Führen durch einen Ablauf (Umtopfen) → wird nur in Grundzügen gezeigt, da das bereits vorgekommen ist
