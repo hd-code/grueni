@@ -28,6 +28,7 @@ const dialogs = {
 let hygroIntervall;
 
 const appData = {
+    arMode: false,
     dialog: dialogs.home,
     topbar: {
         show: true,
@@ -39,13 +40,13 @@ const appData = {
         {
             clickPot: () => potClicked(0),
             options: [],
-            position: '-3 0 -2',
+            position: '-2 -0.5 -2',
             showOptions: false,
         },
         {
             clickPot: () => potClicked(1),
             options: [],
-            position: '3 0 -2',
+            position: '2 -0.5 -2',
             showOptions: false,
         },
     ],
@@ -103,7 +104,7 @@ function endHygro() {
 function drawDiagram(dataset, preparedData) {
     var ctx = document.getElementById('chart-canvas');
 
-    ctx.setAttribute('height', 200);
+    ctx.setAttribute('height', 300);
     ctx.setAttribute('width', 400);
 
     var chart = new Chart(ctx, {
@@ -185,7 +186,7 @@ appData.topbar.temp.click  = () => openHistory('api/history/temperature', 'tempe
 function notImplemented() {
     const tmp = appData.dialog;
     appData.dialog = dialogs.notImplemented;
-    setTimeout(() => appData.dialog = tmp, 700);
+    setTimeout(() => appData.dialog = tmp, 1000);
 }
 
 async function updateHygro(potI) {
@@ -200,10 +201,6 @@ function startHygro(potI, optFill) {
     appData.hygro.show = true;
     appData.dialog = dialogs.hygroView;
     hygroIntervall = setInterval(() => updateHygro(potI), 200);
-}
-
-function doPlanting(steps) {
-
 }
 
 function openWiki(url) {
@@ -238,9 +235,9 @@ async function loadData() {
         const response = await fetch('api');
         const data = await response.json();
         
-        appData.topbar.air.value   = data.airHumidity;
-        appData.topbar.light.value = data.light;
-        appData.topbar.temp.value  = data.temperature;
+        appData.topbar.air.value   = parseInt(data.airHumidity);
+        appData.topbar.light.value = parseInt(data.light);
+        appData.topbar.temp.value  = parseInt(data.temperature);
     
         for (let i = 0, ie = data.plants.length; i < ie; i++) {
             const plant = data.plants[i];
@@ -252,7 +249,7 @@ async function loadData() {
 }
 
 loadData();
-setInterval(loadData, 10 * second); // refresh data every 10 seconds
+setInterval(loadData, 5 * second); // refresh data every 10 seconds
 
 // -----------------------------------------------------------------------------
 

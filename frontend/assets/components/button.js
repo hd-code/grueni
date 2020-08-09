@@ -22,12 +22,12 @@ Vue.component('a-button', {
             @mouseup="click" :class="{clickable: click}"
             :scale="width+' '+height+' 1'"
             geometry="primitive: circle; radius: 0.5;"
-            :material="'transparent: true; opacity: 0.8; color: ' + getColor"
+            :material="'color: ' + getColor"
         ></a-entity>
         <a-text
             :value="text"
             :height="height" :width="width" :wrap-count="charsPerLine"
-            color="#000" align="center" zOffset="0.2"
+            color="#000" align="center" zOffset="1"
         ></a-text>
     </a-entity>`,
 });

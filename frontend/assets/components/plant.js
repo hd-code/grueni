@@ -1,6 +1,6 @@
 Vue.component('a-plant', {
     data: function() { return {
-        boxScale: 2,
+        boxScale: 1.2,
         buttonPositions: [
             '-1.7 2.7 0',
             ' 1.8 3.1 0', 
@@ -48,7 +48,7 @@ Vue.component('a-plant', {
             ></a-button>
         </a-entity>
 
-        <a-box @mouseup="clickPot" class="clickable"
+        <a-box @click="clickPot" class="clickable"
             position="0 0 -1.5" :scale="boxScaleInput" wireframe="true"
         ></a-box>
     </a-entity>`,

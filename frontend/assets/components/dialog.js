@@ -5,12 +5,11 @@ Vue.component('a-dialog', {
         textColor: '#000',
         buttonColor: '#6EBAA7',
         buttonText: 'OK!',
-        scale: '0.5 1 2',
         imgSize: 0.7,
-        imgOffset: 0.45,
+        imgOffset: 0.6,
         numOfLines: 1,
         height: 1,
-        width: 4,
+        width: 6,
         squareSize: 0.2
     }},
     methods: {
@@ -30,7 +29,7 @@ Vue.component('a-dialog', {
             this.numOfLines  = Math.max(Math.floor(this.text?.length / this.charsPerLine), 1);
             this.numOfLines += this.lineBreakCount(this.text);
             this.squareSize  = this.numOfLines >= 3 ? 0.35 : 0.2;
-            const factor     = this.numOfLines < 5 ? 0.35 : 0.25;
+            const factor     = this.numOfLines < 5 ? 0.45 : 0.25;
             let height       = this.numOfLines * factor;
             height          += typeof this.callback !== 'undefined' ?  0.3 : 0;
 
@@ -81,7 +80,7 @@ Vue.component('a-dialog', {
         <a-image
             :src="status === 'shame' ? '#plante-shame' : '#plante-normal'"
             :position="plantePosition"
-            :height="imgSize" :width="imgSize"
+            :height="imgSize * 1.3" :width="imgSize"
         ></a-image>
     </a-entity>`,
 });

@@ -17,7 +17,7 @@ app.use((req, _, next) => {
         url: req.url,
         userAgent: req.headers["user-agent"]??'unknown device'
     };
-    console.log(log);
+    // console.log(log);
     next();
 });
 

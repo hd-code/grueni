@@ -41,8 +41,8 @@ small, sub, sup {
 
 .popup {
     position: fixed;
-    top: 15%; bottom: 0;
-    left: 5%; right: 5%;
+    top: 2em; bottom: 5em;
+    left: .5em; right: .5em;
     max-width: 800px;
     margin: auto;
 }
@@ -55,7 +55,7 @@ small, sub, sup {
 
 .popup > div {
     background-color: #fff;
-    border-radius: .5em .5em 0em 0em;
+    border-radius: .5em;
     padding: .5em;
     height: calc(100% - 3.6em);
     width: 100%;

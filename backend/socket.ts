@@ -21,7 +21,7 @@ socket.on('message', (msg, rinfo) => {
         port: rinfo.port,
         type: 'UDP',
     };
-    console.log(log);
+    // console.log(log);
     handleMessage(msg);
 });
 
