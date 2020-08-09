@@ -25,7 +25,7 @@ Vue.component('a-button', {
             :material="'color: ' + getColor"
         ></a-entity>
         <a-text
-            :value="text"
+            :value="text" position="0 0 0.1"
             :height="height" :width="width" :wrap-count="charsPerLine"
             color="#000" align="center" zOffset="1"
         ></a-text>

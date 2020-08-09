@@ -52,7 +52,7 @@ Vue.component('a-dialog', {
             geometry="primitive: circle; radius: 0.5;" :material="'color: ' + backgroundColor"
         ></a-entity>
         <a-text
-            :value="text"
+            :value="text" position="0 0 0.1"
             :color="textColor" :wrap-count="charsPerLine"
             align="center" :height="calcHeight - 0.5" :width="width - 0.75"
         ></a-text>

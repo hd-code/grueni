@@ -8,14 +8,14 @@
             },
             null
         ],
-        "history": [{
-            "timestamp": 1596956530,
-            "airHumidity": 54,
-            "light": 180,
-            "temperature": 24,
-            "pots": [{
-                "soilHumidity": 73
-            }]
-        }]
+        "history": [
+            { "timestamp": 1596017600, "airHumidity": 49, "light": 300, "temperature": 22, "pots": [{"soilHumidity":23}] },
+            { "timestamp": 1596104000, "airHumidity": 48, "light": 293, "temperature": 23, "pots": [{"soilHumidity":53}] },
+            { "timestamp": 1596276800, "airHumidity": 47, "light": 304, "temperature": 24, "pots": [{"soilHumidity":66}] },
+            { "timestamp": 1596363200, "airHumidity": 50, "light": 406, "temperature": 20, "pots": [{"soilHumidity":54}] },
+            { "timestamp": 1596449600, "airHumidity": 49, "light": 345, "temperature": 23, "pots": [{"soilHumidity":34}] },
+            { "timestamp": 1596536000, "airHumidity": 46, "light": 391, "temperature": 25, "pots": [{"soilHumidity":22}] },
+            { "timestamp": 1596622400, "airHumidity": 51, "light": 398, "temperature": 26, "pots": [{"soilHumidity":18}] }
+        ]
     }
 }

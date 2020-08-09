@@ -28,7 +28,7 @@ const dialogs = {
 let hygroIntervall;
 
 const appData = {
-    arMode: false,
+    arMode: true,
     dialog: dialogs.home,
     topbar: {
         show: true,
