@@ -180,18 +180,18 @@ Das Zwischenergebnis des Videos ohne animierte Komponenten findet sich unter dem
 
 ### Animation
 
-Die Animation von PLANT-E und den benötigten 3D-Modellen[^liste] geschah mithilfe von Blender. Die Relation zum Realfilmanteil wurde geschaffen über dessen Einfügen als Hintergrundebene, anschließend wurden die fertigen Animationen einzeln als png-Sequenzen exportiert. Folgende Modelle, Animationen und Grafiken wurden erstellt:[^modelle]  
+Die Animation von PLANT-E und den benötigten 3D-Modellen geschah mithilfe von Blender. Die Relation zum Realfilmanteil wurde geschaffen über dessen Einfügen als Hintergrundebene, anschließend wurden die fertigen Animationen einzeln als png-Sequenzen exportiert. Folgende Modelle, Animationen und Grafiken wurden erstellt:[^modelle]  
 
 **PLANT-E**  
 → aufwendigstes Modell darum wurde sich hier einer Vorlage aus dem Videospiel "Little Big Planet" bedient[^plant-e]  
 → dem Modell wurden Haare hinzugefügt und ein Skelett  
 → Gestik und Mimik wurden animiert und an den Realfilm angepasst  
 
-**Pflanzenmodelle**
+**Pflanzenmodelle**  
 → ebenfalls Bedienung fertiger Modelle[^pflanzen]  
 → Animation der Bewegungen  
 
-**Objekte, Icons und Symbole**
+**Objekte, Icons und Symbole**  
 → Modellierung Gießanzeige, Animierung des Füllstandes  
 → Modellierung der benötigten Bestell-Objekte (Blumentopf, Sack Blumenerde, Sack Dünger)  
 → Modellierung Fingerabdruck, Animation Farbverlauf  
@@ -199,7 +199,6 @@ Die Animation von PLANT-E und den benötigten 3D-Modellen[^liste] geschah mithil
 **Texteinblendungen**  
 Für den Bestellvorgang wurden sowohl eine Version mit als auch eine Version ohne Schrift erstellt. Texteinblendungen haben sich später allerdings in Hinblick auf ein einheitliches Bild mehr in After Effects angeboten.
 
-[^liste]: Unter dem Link https://docs.google.com/document/d/1d2xSk-ZW7l9UNOOZi58EsXTvad9Jwen6HXrs-tn9ltg/edit#heading=h.5sm1lkm82nx4 findet sich 
 [^modelle]: Alle zu finden im Google Drive Ordner "Blender Export" (https://drive.google.com/drive/folders/1iVMQ3jvUBsfBQHznfuJ_IGur_D44yWXO)
 [^plant-e]: Link zur Quelle: models-resource.com/playstationo3/littlebigplanet/model/7122/ 
 [^pflanzen]: Quelle: Sketchfab - Zvanstone, Link: https://sketchfab.com/zvanstone
