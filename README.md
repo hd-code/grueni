@@ -62,6 +62,23 @@ Um die AR-Funktionalitäten nutzen zu können, wird zur Zeit ein selbstsignierte
 
 Außerdem muss der Seite Zugriff auf die Kamera und die Bewegungssensoren des Gerätes gestattet werden.
 
+#### VR-Modus
+
+Manchmal ist es einfacher die App in VR zu starten. Dazu sind zwei Modifizierungen nötig. Die folgende Zeile in `frontend/index.html` muss auskommentiert werden:
+
+```html
+  <!-- comment in when AR-mode should be used -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
+```
+
+Außerdem muss in `frontend/assets/main.js` die Variable `appData.arMode` auf `false` gesetzt werden.
+
+```ts
+const appData = {
+    arMode: true, // set to true to enable ar mode
+    // ...
+```
+
 ### Raspberry Pi
 
 Das Raspberry Pi Skript kann auch auf dem gleichen Rechner wie das Backend gestartet werden. Aber vorsicht: das Skript liefert dann keine echten Messwerte, sondern nur Zufallszahlen, die stark umher springen.
@@ -103,7 +120,6 @@ Sollte das Zertifikat abgelaufen sein, kann mit `npm run make:ssl` ein neues ers
 
 - `backend` enthält den Code für das node.js Backend. Es ist komplett in TypeScript implementiert
 - `data` enthält JSON Dateien, die als persistenter Speicher für die Daten agiert. Die Dateien werden vom Backend geladen, verwaltet und ausgeliefert
-- `docs` enthält die komplette und ausführliche Dokumentation
 - `frontend` enthält alle Dateien, die an die Clients ausgliefert werden. Alle Dateien im `assets` können von den Clients abgerufen werden.
 - `raspi` enthält die Python Skripte für den Raspberry Pi.
 - `ssl` enthält die SSL-Zertifikate für gesicherte Verbindungen zum Server
