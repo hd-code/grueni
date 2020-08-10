@@ -1,7 +1,7 @@
 
 # Der Prototyp {#prototyp}
 Wie bereits bei der ersten Ideenfindung von [Anforderungen und Features](#features1) festgestellt, weichen Umfang und technische Umsetzung des Prototypen von der Visionsidee Grüni vor allem in 3 Punkten ab:
-1. **Wirkungsraum, bzw. örtliche Begrenzung**  
+1. **Nutzungsräume, bzw. örtliche Begrenzung**  
 Während die Vision den möglichen Einsatz der Anwendung in verschiedenen Umgebungen beinhaltet, ist der Prototyp eine Anwendung allein auf den Anzuchtkasten ausgelegt, der aus dem Visionsvideo aufgegriffen wird. 
 2. **Darstellung und User Interface**  
 Holografische Projektionen sind zurzeit natürlich nicht umsetzbar darum interagiert der User auf der Oberfläche eines mobilen Gerätes über eine Web-AR-Anwendung. 
@@ -11,6 +11,7 @@ Scan Technologien mit dem Smartphone funktionieren bereits über Bilderkennung. 
 Zeitlich betrachtet dient der Prototyp also der Pflanzenanzucht vom keimen lassen der Samen bis zu dem Zeitpunkt, an dem die Pflanze dem Kasten entwachsen ist. Anschließend soll er für die betreffende Pflanze zwar noch als Ratgeber über allgemeine Informationen dienen, die Analyse von konkreten Messdaten entfällt allerdings.  
 
 ## Recherche und erste Tests
+
 ### Sensoren
 
 Zum Speichern und Verarbeiten der Sensordaten wird ein Raspberry Pi 4 benutzt, da dieser der Projekt-Gruppe bereits zur Verfügung stand. Bei den Sensoren war daher die Auswahl eher begrenzt. 
@@ -91,11 +92,12 @@ Verweis zum Git Repository (+ Installationshinweise?)
 
 ## Fazit zum Prototypen
 
-### Aufgetretene Schwierigkeiten
-### Verbesserungsmöglichkeiten
+### Aufgetretene Herausforderungen und der Umgang damit
+### Weiter ausbaufähige Aspekte
 
 
 # Schlusswort zu Organisation, Team und Modul
+
 Grüni begleitete unser Team auf sehr konstante Art und Weise durch dieses Semester. Die Projektidee war schnell entwickelt und das gesamte Team konnte sich für den Themenbereich eines Gardening-Projekts begeistern, was sehr förderlich war um stetig daran weiterzuarbeiten. Auch Organisation, Absprache und Aufgabenverteilung funktionierten sehr gut. Dies war tatsächlich zum großen Teil den wöchentlich stattfindenden Modulveranstaltungen zu verdanken und möglicherweise auch dem Rahmen des (Corona geschuldeten) Online-Semesters. Die durchgeführten Webex-Meetings wurden anschließend direkt intern weitergeführt und waren stets erstaunlich produktiv. Über Google Drive Documents und ähnliche Tools waren gemeinsames Brainstorming, Festhalten von Ideen, Arbeiten an Dokumenten und Anforderungen konzentriert umsetzbar.  
 
 Als Projektmanagement-Tool wurde Asana verwendet:
