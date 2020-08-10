@@ -119,8 +119,9 @@ Sollte das Zertifikat abgelaufen sein, kann mit `npm run make:ssl` ein neues ers
 ## Ordnerstruktur
 
 - `backend` enthält den Code für das node.js Backend. Es ist komplett in TypeScript implementiert
-- `data` enthält JSON Dateien, die als persistenter Speicher für die Daten agiert. Die Dateien werden vom Backend geladen, verwaltet und ausgeliefert
+- `data` enthält JSON Dateien, die als persistenter Speicher für die Daten agiert. Die Dateien werden vom Backend geladen, verwaltet und ausgeliefert.
+- `docs` enthält die komplette Dokumentation.
 - `frontend` enthält alle Dateien, die an die Clients ausgliefert werden. Alle Dateien im `assets` können von den Clients abgerufen werden.
 - `raspi` enthält die Python Skripte für den Raspberry Pi.
-- `ssl` enthält die SSL-Zertifikate für gesicherte Verbindungen zum Server
-- `unused` enthält Dateien, die während der Entwicklung entstanden, aber verworfen worden sind. Sie dienen jedoch gelegentlich als Referenz
+- `ssl` enthält die SSL-Zertifikate für gesicherte Verbindungen zum Server.
+- `unused` enthält Dateien, die während der Entwicklung entstanden, aber verworfen worden sind. Sie dienen jedoch gelegentlich als Referenz.
