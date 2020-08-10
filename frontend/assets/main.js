@@ -28,7 +28,7 @@ const dialogs = {
 let hygroIntervall;
 
 const appData = {
-    arMode: true,
+    arMode: true, // set to true to enable ar mode
     dialog: dialogs.home,
     topbar: {
         show: true,
