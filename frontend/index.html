@@ -7,9 +7,12 @@
 
   <link rel="stylesheet" href="assets/style.css">
 
-  <!-- AFrame & AR.js -->
+  <!-- Chart.js & AFrame & AR.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script> -->
+
+  <!-- comment in when AR-mode should be used -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
 
   <!-- Vue.js & own components -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
@@ -22,29 +25,65 @@
 <body>
   <div id="root">
     <a-scene embedded vr-mode-ui="enabled: false">
-      <a-image src="assets/hiro.png" rotation="-90"></a-image>
-      <a-sky color="#aaaaff"></a-sky>
+      <a-assets>
+        <img id="hiro" src="assets/img/hiro.png">
+        <img id="plante-normal" src="assets/img/plante-normal.png">
+        <img id="plante-shame"  src="assets/img/plante-shame.png">
+      </a-assets>
 
       <!-- camera and cursor for click events -->
-      <a-entity camera position="0 2 4" cursor="rayOrigin: mouse"
-        raycaster="far: 1000; interval: 10; objects: .clickable"></a-entity>
+        <!-- camera for AR -->
+      <a-entity v-if="arMode" camera cursor="rayOrigin: mouse"
+        raycaster="far: 10000; interval: 10;"></a-entity>
+        <!-- camera for VR -->
+      <a-entity v-else camera cursor="rayOrigin: mouse" position="0 0 6"
+        raycaster="far: 1000; interval: 10;"></a-entity>
+      
+      <!-- AR-mode -->
+      <a-marker v-if="arMode">
+        <a-entity rotation="-70 0 0">
+          <a-entity id="topbar" position="0 2 -2" v-if="topbar.show">
+            <a-button position="-2.0 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lx'" scale="0.9"></a-button>
+            <a-button position=" 0.0 1 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'" scale="0.9"></a-button>
+            <a-button position=" 2.0 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ ' Grad'" scale="0.9"></a-button>
+          </a-entity>
 
-      <!-- <a-marker> -->
+          <a-hygroscope v-if="hygro.show" position="0 1.5 0" :click="hygro.click"
+            :fluid-level="hygro.fill" :optimum-fluid-level="hygro.optFill"
+          ></a-hygroscope>
 
-      <a-entity id="topbar" position="0 5 -2" v-show="topbar.show">
-        <a-button position="-3.5 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lm'"></a-button>
-        <a-button position=" 0.0 0 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'"></a-button>
-        <a-button position=" 3.5 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ '°C'"></a-button>
+          <a-plant v-for="plant of plants"
+            :click-pot="plant.clickPot" :show-options="plant.showOptions"
+            :options="plant.options" :position="plant.position"
+          ></a-plant>
+
+          <a-dialog position="0 -1.3 0.5" :text="dialog.content" :status="dialog.status"></a-dialog>
+        </a-entity>
+      </a-marker>
+
+      <!-- VR-mode -->
+      <a-entity v-else>
+        <!-- Used in VR only -->
+        <a-image src="#hiro" rotation="-90"></a-image>
+        <a-sky color="#aaaaff"></a-sky>
+
+        <a-entity id="topbar" position="0 2 -2" v-if="topbar.show">
+          <a-button position="-2.0 0 0" :click="topbar.light.click" :text="'Helligkeit: ' +     topbar.light.value+'lx'" scale="0.9"></a-button>
+          <a-button position=" 0.0 1 0" :click="topbar.air.click"   :text="'Luftfeuchtigkeit: '+topbar.air.value + '%'" scale="0.9"></a-button>
+          <a-button position=" 2.0 0 0" :click="topbar.temp.click"  :text="'Temperatur: ' +     topbar.temp.value+ ' Grad'" scale="0.9"></a-button>
+        </a-entity>
+
+        <a-hygroscope v-if="hygro.show" position="0 1.5 0" :click="hygro.click"
+          :fluid-level="hygro.fill" :optimum-fluid-level="hygro.optFill"
+        ></a-hygroscope>
+
+        <a-plant v-for="plant of plants"
+          :click-pot="plant.clickPot" :show-options="plant.showOptions"
+          :options="plant.options" :position="plant.position"
+        ></a-plant>
+
+        <a-dialog position="0 -1.3 0.5" :text="dialog.content" :status="dialog.status"></a-dialog>
       </a-entity>
-
-      <!-- <a-hygroscope fluid-level="32" optimum-fluid-level="70" position="-1 1 0"></a-hygroscope> -->
-      <!-- <a-hygroscope fluid-level="54" optimum-fluid-level="70" position="0 1 0"></a-hygroscope> -->
-      <!-- <a-hygroscope fluid-level="73" optimum-fluid-level="70" position="1 1 0"></a-hygroscope> -->
-
-      <!-- <a-plant :options="options" position="-3 0 -2"></a-plant> -->
-
-      <!-- <a-dialog text="Hallo Welt" position="0 0 0.5"></a-dialog> -->
-      <!-- </a-marker> -->
     </a-scene>
 
     <popup :content="popup.content" :exit="popup.exit"></popup>

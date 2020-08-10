@@ -1,8 +1,6 @@
 import { createSocket } from 'dgram';
 import { handleMessage } from './controller/socket';
 
-import { handleMessage } from './controller/socket';
-
 // -----------------------------------------------------------------------------
 
 const socket = createSocket('udp4');
@@ -18,12 +16,12 @@ socket.on('error', (err) => {
 });
 
 socket.on('message', (msg, rinfo) => {
-    const log = {
-        addr: rinfo.address,
-        port: rinfo.port,
-        type: 'UDP',
-    };
-    console.log(log);
+    // const log = {
+    //     addr: rinfo.address,
+    //     port: rinfo.port,
+    //     type: 'UDP',
+    // };
+    // console.log(log);
     handleMessage(msg);
 });
 

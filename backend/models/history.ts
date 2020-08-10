@@ -20,5 +20,5 @@ export function isHistoryEntry(entry: any): entry is IHistoryEntry {
 }
 
 export function isNewerEntry(newer: IHistoryEntry, older: IHistoryEntry): boolean {
-    return newer.timestamp >= older.timestamp;
+    return newer.timestamp > older.timestamp;
 }

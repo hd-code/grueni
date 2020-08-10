@@ -22,10 +22,16 @@ let currentData: IHistoryEntry = getLatestHistoryEntry();
 
 // -----------------------------------------------------------------------------
 
-const minute = 1000 * 60;
+// !!! do not save history, because the front end is not able to handle anything
+// except the test data !!!
 
-function addToHistory() {
-    saveHistoryEntry(currentData);
-}
+// const minute = 1000 * 60;
 
-setInterval(addToHistory, 15 * minute);
+// function addToHistory() {
+//     const latest = getLatestHistoryEntry();
+//     if (isNewerEntry(currentData, latest)) {
+//         saveHistoryEntry(currentData);
+//     }
+// }
+
+// setInterval(addToHistory, 15 * minute);

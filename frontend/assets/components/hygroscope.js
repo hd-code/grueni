@@ -8,7 +8,7 @@ Vue.component('a-hygroscope', {
             radiusDiff: 0.01,
         }
     },
-    props: [ 'fluidLevel', 'optimumFluidLevel', 'position' ],
+    props: [ 'click', 'fluidLevel', 'optimumFluidLevel', 'position' ],
     computed: {
         fillHeight: function() {
             const fillLevel = this.fluidLevel / this.optimumFluidLevel;
@@ -16,17 +16,17 @@ Vue.component('a-hygroscope', {
             return Math.min(result, this.height);
         }, 
         yPosition: function() {
-            return (-1 * ((this.height - this.fillHeight) / 2));
+            return (this.fillHeight - this.height) / 2;
         }
     },
-    template: `<a-entity
-                    :position="position"
-                    :geometry="'primitive: cylinder; radius: ' + radius + '; height: ' + height"
-                    material="color: #fff; opacity: 0.1">
-                    <a-entity
-                        :geometry="'primitive: cylinder; radius: ' + (radius - radiusDiff) + '; height: ' + fillHeight"
-                        :material="'color: ' + (fluidLevel < optimumFluidLevel ? color : colorOpt)"
-                        :position="'0 ' + yPosition + ' 0'"
-                    ></a-entity>
-                </a-entity>`
+    template: `<a-entity :position="position" class="clickable" @mouseup="click"
+        :geometry="'primitive: cylinder; radius: ' + radius + '; height: ' + height"
+        material="color: #fff; opacity: 0.1"
+    >
+        <a-entity v-if="fluidLevel > 0"
+            :geometry="'primitive: cylinder; radius: ' + (radius - radiusDiff) + '; height: ' + fillHeight"
+            :material="'color: ' + (fluidLevel < optimumFluidLevel ? color : colorOpt)"
+            :position="'0 ' + yPosition + ' 0'"
+        ></a-entity>
+    </a-entity>`
 });

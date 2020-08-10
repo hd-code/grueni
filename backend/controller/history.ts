@@ -1,14 +1,14 @@
 import { getHistoryAfterTS } from './storage';
 import { IHistoryEntry } from '../models/history';
 
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
 
 export interface IChartEntry {
     key: number;
     value: number;
 }
 
-export function getAirHum(): IChartEntry[] {
+export function getAirHum(): IChartEntry[] { 
     return getChartEntries(airToChart);
 }
 
@@ -20,19 +20,19 @@ export function getTemp(): IChartEntry[] {
     return getChartEntries(tempToChart);
 }
 
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
 
-const day = 1000 * 60 * 60 * 24;
+// const day = 1000 * 60 * 60 * 24;
 
-function getTSOneDayAgo(): number {
-    return new Date(Date.now() - day).getTime();
-}
+// function getTSOneDayAgo(): number {
+//     return new Date(Date.now() - day).getTime();
+// }
 
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
 
 function getChartEntries(projection: (entry: IHistoryEntry) => IChartEntry): IChartEntry[] {
-    const ts = getTSOneDayAgo();
-    const entries = getHistoryAfterTS(ts);
+    // const ts = getTSOneDayAgo();
+    const entries = getHistoryAfterTS(0); // Just for testing
     return entries.map(projection);
 }
 

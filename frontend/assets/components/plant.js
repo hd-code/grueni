@@ -1,18 +1,22 @@
 Vue.component('a-plant', {
     data: function() { return {
+        boxScale: 1.2,
         buttonPositions: [
-            '-2.0 3.0 0',
-            ' 1.3 3.6 0', 
-            ' 1.6 1.9 0', 
-            '-0.6 4.1 0',
-            '-1.5 1.5 0', // more button
+            '-1.7 2.7 0',
+            ' 1.8 3.1 0', 
+            ' 2.1 1.7 0', 
+            '-0.5 3.8 0',
+            '-1.2 1.4 0', // more button
         ],
-        buttonScale: 0.7,
+        buttonScale: 0.9,
         moreButtonText: '...',
         optionsPerPage: 4,
         page: 0,
     }},
     computed: {
+        boxScaleInput: function() {
+            return this.boxScale + ' ' + this.boxScale * 1.5 + ' ' + this.boxScale;
+        },
         lastPageNumber: function() {
             return Math.ceil(this.options.length / this.optionsPerPage) - 1;
         },
@@ -29,20 +33,23 @@ Vue.component('a-plant', {
                 this.page = 0;
         }
     },
-    props: [ 'options', 'position' ],
+    props: [ 'clickPot', 'options', 'position', 'showOptions' ],
     template: `<a-entity :position="position">
-        <a-button v-for="(option, index) in optionsOnPage"
-            :text="option.text" :click="option.click"
-            :state="option.state"
-            :position="buttonPositions[index]" :scale="buttonScale"
-        ></a-button>
+        <a-entity v-if="showOptions">
+            <a-button v-for="(option, index) in optionsOnPage"
+                :text="option.text" :click="option.click" :state="option.state"
+                :position="buttonPositions[index]" :scale="buttonScale"
+            ></a-button>
 
-        <a-button v-if="options.length > optionsPerPage"
-            :text="moreButtonText" :scale="buttonScale"
-            :click="nextPage"
-            :position="buttonPositions[optionsPerPage]"
-        ></a-button>
+            <a-button v-if="options.length > optionsPerPage"
+                :text="moreButtonText" :scale="buttonScale"
+                :click="nextPage"
+                :position="buttonPositions[optionsPerPage]"
+            ></a-button>
+        </a-entity>
 
-        <a-cone position="0 0 -1.5" height="2" radius-top="1.2" radius-bottom="1" open-ended="true"></a-cone>
+        <a-box @click="clickPot" class="clickable"
+            position="0 0 -1.5" :scale="boxScaleInput" wireframe="true"
+        ></a-box>
     </a-entity>`,
 });
