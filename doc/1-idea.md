@@ -115,13 +115,10 @@ Produkte und Projekte gibt es dazu viele. Im Folgenden werden zur Verdeutlichung
 
 #### Visualisierungs-Software
 
-**Garten-Planer:**
-
-Beispiel "Home Design 3D Outdoor & Garden"[^homedesign] – Eine App, die einen virtuellen Rundgang im eigenen Garten ermöglicht.
-
-**Beet-Planer:**
-
-Beispiel "Alphabeet"[^alphabeet] – Wer sich hier anmeldet, kann zunächst einmal seine Beete digital anlegen. Je nach Größe wird vorgeschlagen, welche Pflanzen wo angebaut werden sollten und auch zueinander passen. Ist das Beet fertig geplant, wird automatisch eine Aufgabenliste erzeugt, die per Mail an die täglich nötigen Arbeiten erinnert und online bei Erledigung abgehakt werden können: Tomaten ausgeizen, Unkraut entfernen, Stecklinge ziehen, Möhren abdecken, Gießen und vieles mehr.
+- **Garten-Planer:**
+  Beispiel "Home Design 3D Outdoor & Garden"[^homedesign] – Eine App, die einen virtuellen Rundgang im eigenen Garten ermöglicht.
+- **Beet-Planer:**
+  Beispiel "Alphabeet"[^alphabeet] – Wer sich hier anmeldet, kann zunächst einmal seine Beete digital anlegen. Je nach Größe wird vorgeschlagen, welche Pflanzen wo angebaut werden sollten und auch zueinander passen. Ist das Beet fertig geplant, wird automatisch eine Aufgabenliste erzeugt, die per Mail an die täglich nötigen Arbeiten erinnert und online bei Erledigung abgehakt werden können: Tomaten ausgeizen, Unkraut entfernen, Stecklinge ziehen, Möhren abdecken, Gießen und vieles mehr.
 
 Hierbei stehen also drei Aspekte im Vordergrund: Planen, Umsetzen und Lernen anhand der Infobibliothek.
 
