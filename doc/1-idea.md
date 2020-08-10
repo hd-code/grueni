@@ -4,7 +4,7 @@ title: Dokumentation zur App Grüni
 author: Robert Ackermann, Hannes Dröse, Dennis Krischal, Livia Schumm
 date: 03.08.2020
 abstract: |
-    Im Folgenden behandeln wir Anfänge, Entwicklung und Ergebnisse des Semester-Projektes "Grüni" im Rahmen des Medienprojekt-Moduls. Grüni ist die Vision einer Anwendung um Nutzern das Gärtnern sowie das gärtnern lernen zu erleichtern.
+    Im Folgenden behandeln wir Anfänge, Entwicklung und Ergebnisse des Semester-Projektes "Grüni" im Rahmen des Medienprojekt-Moduls. Grüni ist die Vision einer Anwendung, um Nutzern das Gärtnern sowie das gärtnern lernen zu erleichtern.
 lang: de
 ---
 
@@ -48,8 +48,8 @@ Laut dem Zukunftsinstitut[^1] ist die Zahl der Menschen mit Garten oder Balkon i
 
 Der Platzmangel in Städten verlangt z.B. nach vertikalen Lösungen:
 
-- "Pflanzetageren": Versetzt angeordnete, kleeblattförmige Gefäße, die sich hoch stapeln lassen  
-- "Minigarden": vertikales Pflanzsystem, Begrünung von Wänden oder kompletter Balkonbrüstung  
+- "Pflanzetageren": Versetzt angeordnete, kleeblattförmige Gefäße, die sich hoch stapeln lassen
+- "Minigarden": vertikales Pflanzsystem, Begrünung von Wänden oder kompletter Balkonbrüstung
 - "Skyplanter": Pflanzen wachsen in einer Art umgedrehtem Blumentopf von der Decke herab nach unten
 
 Doch nicht nur das Interesse in Richtung zurück zum Ursprünglichen – zur Natur – ist groß, sondern auch innovative, konnektive Lösungen sind gefragt, die das Leben in Haus und Garten durch **smarte Technik** vereinfachen. In seinem Vortrag auf dem DIY Garden Summit 2017 in Berlin[^3] erklärt Christian May, Geschäftsführer von Kärcher, wie ein Tag im Garten des Jahres 2030 aussehen könnte:
@@ -176,7 +176,7 @@ Eine zusammengetragene Liste weiterer Crowdfunding Projekte zu dem Thema findet 
 
 [^asana2]: Link: <https://app.asana.com/0/1172859492234369/1172957097729748>
 
-##	Festlegung des Projektrahmens   
+##	Festlegung des Projektrahmens
 
 Aufgrund der Fülle an Themengebieten und bereits existierenden Projekten, soll nun die Vision und ihr potenzieller Wirkungsraum von den recherchierten Projekten abgegrenzt werden.
 
@@ -192,7 +192,7 @@ Die allgemeine Zielgruppe umfasst Privatpersonen, die Interesse am Gärtnern hab
 
 #### Beispiel-Personas
 
-Die allgemeine Zielgruppe könnte Personen mit folgenden Steckbriefen enthalten:  
+Die allgemeine Zielgruppe könnte Personen mit folgenden Steckbriefen enthalten:
 
 **Jonas:**
 

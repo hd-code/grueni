@@ -1,69 +1,64 @@
 # Die Vision {#vision}
 
-Der Weg durch die Projektfindungsphase führt nun also zur Anwendung "Grüni". Grüni ist ein universelles Hilfstool für Pflanzen, welches im Haus oder Garten Einsatz findet. Sie beherrscht sehr umfangreiche Analysen, Simulationen und Funktionalitäten rund um das Gärtnern. Dabei ist die Größe des Topfes, Beetes oder Gartens sowie die Auswahl der Geräte, auf denen die App funktioniert, komplett variabel und frei. Es kommen sehr ausgefeilte Arten der holografischen Visualisierung zum Einsatz, bis hin zu einem personifizierten Gartengehilfen – PLANT-E. Wobei PLANT-E selbst keine Arbeiten verrichten kann, sondern als holografischer Assistent den Nutzer vor allem durch Prozesse (Eintopfen, Umtopfen etc.) führt oder Erinnerungen gibt.
+Der Weg durch die Projektfindungsphase führt nun also zur Anwendung “Grüni”. Grüni ist ein universelles Hilfstool für Pflanzen, welches im Haus oder Garten Einsatz findet. Sie beherrscht sehr umfangreiche Analysen, Simulationen und Funktionalitäten rund um das Gärtnern. Dabei ist die Größe des Topfes, Beetes oder Gartens sowie die Auswahl der Geräte, auf denen die App funktioniert, komplett variabel und frei. Es kommen sehr ausgefeilte Arten der holografischen Visualisierung zum Einsatz, bis hin zu einem personifizierten Gartengehilfen – PLANT-E. Wobei PLANT-E selbst keine Arbeiten verrichten kann, sondern als holografischer Assistent den Nutzer vor allem durch Prozesse (Eintopfen, Umtopfen etc.) führt oder Erinnerungen gibt.
 
 ## Geplante Eigenschaften und Features der Zukunftsvision
 
 - Geräteunabhängigkeit  
-→ App läuft auf stationären Geräten (z.B. Echo-Dots), mobilen Endgeräten (z.B. Smartphone, Tablet)  
-
+  - App läuft auf stationären Geräten (z.B. Echo-Dots), mobilen Endgeräten (z.B. Smartphone, Tablet)  
 - Geräteübergreifend  
-→ Messungen von einem Gerät (steht bei den Pflanzen)  
-→ Mitteilung des Nutzers über ein anderes Gerät (welches ihm gerade am nächsten ist)  
-
+  - Messungen von einem Gerät (steht bei den Pflanzen)  
+  - Mitteilung des Nutzers über ein anderes Gerät (welches ihm gerade am nächsten ist)  
 - Nutzung in verschiedensten Umgebungen  
-→ sowie innerhalb als auch außerhalb des Hauses  
-→ ein paar Töpfe / ein Beet/ ein ganzer Garten 
-
+  - sowie innerhalb als auch außerhalb des Hauses  
+  - ein paar Töpfe / ein Beet/ ein ganzer Garten 
 - Analyse der Umgebung via Scan  
-→ geeignete Orte für die Pflanzen finden anhand ihrer Art und deren Bedürfnissen
-
+  - geeignete Orte für die Pflanzen finden anhand ihrer Art und deren Bedürfnissen
 - Beetplanung / Simulation des Pflanzenwachstums innerhalb einer gegebenen Umgebung  
-→ holografische Visualisierung von Pflanzen an entsprechenden Stellen inklusive Simulation wie sich die Pflanze dort entwickeln würde
-
+  - holografische Visualisierung von Pflanzen an entsprechenden Stellen inklusive Simulation wie sich die Pflanze dort entwickeln würde
 - Pflanzenerkennung  
-→ Klassifizierung von Pflanzen und Samen via Scan 
-
+  - Klassifizierung von Pflanzen und Samen via Scan 
 - Bereitstellung von Informationen zur Pflanze
-
 - Bestimmung des Zustands der Pflanze  
-→ Alter, Bewässerung, Bodenzustand, Lichtverhältnisse, Reifegrad der Früchte usw.
-
+  - Alter, Bewässerung, Bodenzustand, Lichtverhältnisse, Reifegrad der Früchte usw.
 - Visualisierung dieser Zustandsinformationen (z.B. mit einer Gieß- bzw. Bewässerungsanzeige)  
-→ holografisch, symbolisch, auditiv
-
+  - holografisch, symbolisch, auditiv
 - Erinnerungsfunktion z.B. ans Gießen, Umtopfen, Rausstellen (z.B. in Form von PLANT-E)
-
 - Vorschläge und Produktempfehlungen  
-→ entsprechend der aktuellen Bedürfnisse der Pflanzen werden die benötigten Tools und Komponenten direkt zur Bestellung angeboten
-
+  - entsprechend der aktuellen Bedürfnisse der Pflanzen werden die benötigten Tools und Komponenten direkt zur Bestellung angeboten
 - der Lehrmeister **PLANT-E**  
-→ Personifizierung des Computers für den Menschen  
-→ Tipps Erinnerungen und Co. werden dem Nutzer über PLANT-E mitgeteilt
-
+  - Personifizierung des Computers für den Menschen  
+  - Tipps Erinnerungen und Co. werden dem Nutzer über PLANT-E mitgeteilt
 - Fingerabdruck-Scan  
-→ zum Autorisieren von Transaktionen
-
+  - zum Autorisieren von Transaktionen
 - Gestenerkennung  
-→ Greifen (zum Auswählen), leichtes Nicken, Rahmen für einen Schnappschuss setzen
-
+  - Greifen (zum Auswählen), leichtes Nicken, Rahmen für einen Schnappschuss setzen
 - Community-Komponente / Sharing-Funktion  
-→ Möglichkeit die eigenen Pflanzen mit den Freunden zu teilen, fotobasiert
+  - Möglichkeit die eigenen Pflanzen mit den Freunden zu teilen, fotobasiert
 
 ## Videovorbereitungen
 
 ### Drehbuch
 
-(kurze Beschreibung der Entwicklung plus Verweis Anhang)
+Der erste Schritt zur Filmkreation ist die Überlegung gewesen, welche Aspekte der Vision Grüni als Produkt dargestellt werden sollen. Da der Umfang der Visionsidee sehr groß und variabel ist, ist die Handlung auf eine bestimmte Zielgruppe festgelegt worden - die im festgelegten Projektrahmen definierte Zielgruppe “Jonas”. Schon bei der ersten Version des Drehbuches ist direkt klar geworden, wer die Rolle dieser Zielgruppe treffen würde und so hat die Wahl unseres Hauptdarstellers schnell festgestanden. In diesem Zuge ist der Name “Jonas” auf “Christian” geändert worden. Christian
+startet entsprechend seiner Persona mit keinerlei Grundwissen, kommt zufällig an Gärtner-Material und wird daraufhin auf die Anwendung gestoßen.
 
-Produkt Grundidee Vision - was soll dargestellt werden? 
---> Zielgruppe Jonas (startet mit keinerlei Grundwissen, kommt zufällig an Gärtner-Material und wird daraufhin auf die Anwendung gestoßen)
-Darstellung über PLANT-E, der dabei wie ein virtueller Lehrer ist, der das Gärtnern in deinem spezifischen Beet beibringen soll
-zum einen soll eine Beratung stattfinden, d.h. virtuelle Simulation der Pflanzen auf dem Beet
-Anschließend dann Anweisungen wie alles umgesetzt wird
-Dramaturgisch: Entwicklung findet gleichermaßen zwischen Mensch und App statt
+Dramaturgisch findet die Entwicklung gleichermaßen zwischen Mensch und App statt.
+Die Darstellung der App geschieht hauptsächlich über PLANT-E, der dabei wie ein virtueller Lehrer ist und Christian das Gärtnern im Rahmen seiner Ausstattung und Möglichkeiten vorort beibringen soll.
 
-Verweis ältere Versionen: https://drive.google.com/drive/folders/1toOwAzorJRI8cY0EzBIM56n-LDfFUXsK
+Inspiriert war die Idee PLANT-Es ursprünglich vom Roboter WALL·E aus dem Film “WALL·E – Der Letzte räumt die Erde auf”, daher auch der Name. Anfänglich sollte PLANT-E auch in seiner Art der Kommunikation an WALL·E angelehnt sein, sprich er sollte möglichst wenig sprechen, sondern hauptsächlich über Gestik und Mimik kommunizieren. Realistisch war dies für die Umsetzung seiner Funktion als Ratgeber und Lehrmeister allerdings nicht, darum ist die Entscheidung doch auf Dialoge gefallen.
+
+Weitere im Verlauf der Entwicklung für die Handlung festgelegte Aspekte des Filmes:
+
+- (Alexa) Echos = Analysegerät (Scan)
+    – Wohnung und Balkon bei Christian
+    – Kommunikation zwischen Christian und Schwester
+- Handy = Projektor
+    – Andeutung von Variabilität durch Nachbarsgärten – Andeutung einer Community durch Posts
+
+Die Endfassung des Drehbuches findet sich im [Anhang](#anhang).[^drehbuchEnd]
+
+[^drehbuchEnd]: Alle Versionen des Drehbuches finden sich im Google-Drive Ordner unter dem Link: <https://drive.google.com/drive/folders/1toOwAzorJRI8cY0EzBIM56n-LDfFUXsK>
 
 ### Interaktionsgestaltung und UI-Design
 
@@ -72,26 +67,35 @@ Bei der Entwicklung des Drehbuches wurde bereits schnell deutlich, dass die Inte
 #### Szene 2
 
 - Verarbeitung von Sprachbefehlen
-
 - Scannen des Raums, Identifizierung der Gegenstände → Erkennung von Anzuchtkasten und Samen:
+  - Stil-Inspiration: <https://www.youtube.com/watch?v=3HbkcRAQhew>
+
 ![UI Raumscan 1](img/UI/Raumscan1.png)
+
 ![UI Raumscan 2](img/UI/Raumscan2.png)
+
 ![UI Raumscan 3](img/UI/Raumscan3.png)
-→ Stil-Inspiration: https://www.youtube.com/watch?v=3HbkcRAQhew
 
 - Visualisierung der Pflanzen:
+
 ![Pflanzenvisualisierung Frontalansicht](img/UI/Pflanzenvisualisierung_frontal.png)
+
 ![Pflanzenvisualisierung Variante 1](img/UI/Pflanzenvisualisierung.png)
+
 ![Pflanzenvisualisierung Variante 2](img/UI/Pflanzenvisualisierung_mitNamen.png)
 
 - Gestenerkennung → “Greifen” der Pflanzen, um mehr Informationen zu erhalten
+
 ![Gestenerkennung - Greifen](img/UI/Greifen.png)
 
 - Anzeige weiterer Informationen über die Pflanzen
+
 ![Steckbrief Variante 1](img/UI/Steckbriefanzeige.png)
+
 ![Steckbrief Variante 2](img/UI/Steckbriefanzeige_verschVarianten.png)
 
-- Analyse des Raumes und Erkennen eines guten Standortes für den Anzuchtkasten 
+- Analyse des Raumes und Erkennen eines guten Standortes für den Anzuchtkasten
+
 ![UI Raumscan 4](img/UI/Raumscan4.png)
 
 - Gestenerkennung → Unsicherheit Christians wird erkannt und Hilfe angeboten
