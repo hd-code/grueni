@@ -153,12 +153,25 @@ Der Drehtag war der 21.05.2020. Nach gründlich getroffenen Vorbereitungen waren
 ### Schnitt und Ton
 
 FinalCut Programm, Musik, Schrift
+
+Link zum Ergebnis ohne After Effects
+
 ### Animation
+
+Die Animation von PLANT-E und 3D-Objekten in Blender. Relation zum Video über Einfügen als Hintergrundebene, Exportieren als png-Sequenzen.
+
 PLANT-E (Quelle angeben! Urheberrechte siehe Video-Abspann)
+
+Aufzählung aller Animationen
+
 ### After Effects
+
+Einfügen der Animationen in den Realfilmanteil, holografische Effekte erschaffen, evtl. Screenshots(?), Schriften, Oberflächen, Bilder einfügen, Schluss-Sequenz mithilfe von Markern
+
 Design, Farben, Schriften
----
+
 ## Fazit zum Ergebnis-Video
+
 vgl. mit geplante Features
 
 ### Aufgetretene Herausforderungen und der Umgang damit
@@ -166,25 +179,26 @@ vgl. mit geplante Features
 **Die Herausforderung der Prioritätenlegung:**  
 Bei der Entwicklung des Drehbuches stellte sich vor allem die Frage inwieweit sich in einem kurzen Zeitrahmen eine schöne Geschichte erzählen lässt bei der eine Produktvision mit ihren Features deutlich vermittelt wird? Gerade der der Grad an Interaktion zwischen Mensch und Maschine stand immer wieder im Fokus und führte zu wiederholt nötigen Absprachen und mehrmaligen Überarbeitungen des Drehbuches.[^protokoll1] 
 
-**Sinnvolle Planung und Vorbereitung:**
-- Die Interaktionsgestaltung wurde zwar bereits vor dem Dreh bei der Erstellung von Storyboard und Drehplan kommuniziert, visuell skizziert allerdings erst hinterher. Teilweise musste dann mit Bildausschnitten gearbeitet werden, die man noch optimieren hätte können.
-- Storyboard und Drehplan ermöglichten zwar den reibungslosen Dreh, dabei wurden jedoch die Kameras fast durchgängig laufen gelassen. Dies geschah der Einfachheit halber da Platzmangel herrschte und die Kameras teilweise schlecht zugängig waren, was für den Moment eine sinnvolle Entscheidung war. Im Nachhinein wurde daraus im Schnitt jedoch mehr Zeitaufwand, da eine große Menge an Videomaterial gesichtet und aussortiert werden musste schon alleine für den Rohschnitt.
+**?? ?? ??**  
+Die Interaktionsgestaltung wurde zwar bereits vor dem Dreh bei der Erstellung von Storyboard und Drehplan kommuniziert, visuell skizziert allerdings erst hinterher. Teilweise musste dann mit Bildausschnitten gearbeitet werden, die man noch optimieren hätte können.
 
-**Koordination der Arbeitsschritte in der Videonachbearbeitung:**
-- Aus technischen Gründen war die Reihenfolge von Schnitt, Animation und After Effects größtenteils nur nacheinander möglich.
-- Paralleles Arbeiten an dem Video war also nur teilweise möglich und so wurden immer unterschiedliche Teile des Teams ausgebremst, was den Zeitrahmen wiederum schwierig abschätzen und planen ließ.
-- Gerade der letzte Schritt, das Zusammenfügen von Komponenten aus Realfilm und Animation war abhängig von der Fertigstellung dieser vorausgehenden Komponenten und wurde im Umfang unterschätzt. After Effects war zudem ein bis dato noch nie verwendetes Tool
+**Auch gute Vorbereitung schafft neue Herausforderungen:**  
+Storyboard und Drehplan ermöglichten zwar den reibungslosen Dreh, dabei wurden jedoch die Kameras fast durchgängig laufen gelassen. Dies geschah der Einfachheit halber da Platzmangel herrschte und die Kameras teilweise schlecht zugängig waren, was für den Moment eine sinnvolle Entscheidung war. Im Nachhinein wurde daraus im Schnitt jedoch mehr Zeitaufwand, da eine große Menge an Videomaterial gesichtet und aussortiert werden musste, schon alleine für den Rohschnitt.
+
+**Koordination der Arbeitsschritte in der Videonachbearbeitung:**  
+Aus technischen Gründen war die Reihenfolge von Schnitt, Animation und After Effects größtenteils nur nacheinander möglich. Paralleles Arbeiten an dem Video war also nur teilweise möglich und so wurden immer unterschiedliche Teile des Teams ausgebremst, was den Zeitrahmen wiederum schwierig abschätzen und planen ließ. Gerade der letzte Schritt, das Zusammenfügen von Komponenten aus Realfilm und Animation war abhängig von der Fertigstellung dieser vorausgehenden Komponenten und wurde im Umfang unterschätzt. 
 
 **Rendern:**
 
 
 [^protokoll1]: vgl. Asana-Protokolle KW19 (https://app.asana.com/0/1172859492234369/1174005793106255) bis KW21 (https://app.asana.com/0/1172859492234369/1176239239126747)
 
-### Weiter ausbaufähige Aspekte im Video
+### Ausblick und Auswertung
 
+Ausbaufähige Aspekte am Video:
 - in größerem Zeitrahmen Darstellung weiterer (evtl. aller) Features
 - Verdeckungen
 - Taktung am Ende des Videos
 - Soundeffekte ausbauen (z.B. Erscheinen und Verschwinden von PLANT-E)
 
-
+Insgesamt jedoch zufriedenstellend weil ... 

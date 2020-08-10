@@ -93,8 +93,8 @@ Verweis zum Git Repository (+ Installationshinweise?)
 ## Fazit zum Prototypen
 
 ### Aufgetretene Herausforderungen und der Umgang damit
-### Weiter ausbaufähige Aspekte
 
+### Ausblick und Auswertung
 
 # Schlusswort zu Organisation, Team und Modul
 
