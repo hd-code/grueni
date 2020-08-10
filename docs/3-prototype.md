@@ -107,6 +107,8 @@ Die Projekte überschneiden sich in genau einem Punkt, da es sich angeboten hat 
 
 #### Schaltplan
 
+*siehe Grafik*
+
 ![Schaltplan der Sensoren mit dem Raspberry Pi](img/schaltplan.png)
 
 #### Skript
