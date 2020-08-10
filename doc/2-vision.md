@@ -143,7 +143,7 @@ Der Drehtag war der 21.05.2020. Nach gründlich getroffenen Vorbereitungen waren
 | Akteure am Drehtag | Funktion | 
 |--------|--------|
 | Christian Weniger | Hauptdarsteller in der Rolle des Christians |
-| Hannes Dröse | Tonaufnahme / Sprecher für die Rollen von PLANT-E und ALEXA |
+| Hannes Dröse | Tonaufnahme / Sprecher für die Rollen von PLANT-E und Alexa |
 | Robert Ackermann | Motion / UI Vision |
 | Dennis Krischal | Kamera / Storyboard |
 | Livia Schumm | Setdesign / Drehplan |
@@ -152,9 +152,26 @@ Der Drehtag war der 21.05.2020. Nach gründlich getroffenen Vorbereitungen waren
 
 ### Schnitt und Ton
 
-FinalCut Programm, Musik, Schrift
+Der hauptsächliche Zeitaufwand dabei ist definitiv in das Sortieren und Zusammenfügen von Bild- und Tonaufnahmen geflossen, sprich den Rohschnitt. Für die Stimmen von PLANT-E und Alexa wurde der Ton gesondert aufgenommen, nachträglich verzerrt und anschließend dem Video hinzugefügt. 
 
-Link zum Ergebnis ohne After Effects
+Verwendet wurde das Schnittprogramm **Final Cut Pro**. 
+
+Weitere Arbeitsschritte umfassten:
+- den Feinschnitt
+- Anpassung der Belichtung (die Lichtverhältnisse am Drehort waren suboptimal, was sich in der Qualität der Bildaufnahmen zeigte)
+- das Erstellen einer Fotosequenz
+- die Unterlegung mit Musik 
+- Zoom- und Übergangs-Effekte für die Schlusssequenz in der Kartenansicht
+- Erstellen des Abspanns mit Credits und Quellen  
+
+**Verwendete Musik:**  
+Gianmara Testa - Gli Amanti di Roma  
+Adana Twins - Nobis
+
+**Verwendete Schrift:**  
+Amatic SC
+
+Das Zwischenergebnis des Videos ohne animierte Komponenten findet sich unter dem Link https://drive.google.com/drive/folders/1iqPfL00Kh-QehQd0OGzR-3Inb1JzLeHX.
 
 ### Animation
 
@@ -166,7 +183,7 @@ Aufzählung aller Animationen
 
 ### After Effects
 
-Einfügen der Animationen in den Realfilmanteil, holografische Effekte erschaffen, evtl. Screenshots(?), Schriften, Oberflächen, Bilder einfügen, Schluss-Sequenz mithilfe von Markern
+Einfügen der Animationen in den Realfilmanteil, holografische Effekte erschaffen, evtl. Screenshots(?), Schriften, Oberflächen, Bilder einfügen, Verdeckungen, Schluss-Sequenz mithilfe von Markern
 
 Design, Farben, Schriften
 
@@ -183,10 +200,11 @@ Bei der Entwicklung des Drehbuches stellte sich vor allem die Frage inwieweit si
 Die Interaktionsgestaltung wurde zwar bereits vor dem Dreh bei der Erstellung von Storyboard und Drehplan kommuniziert, visuell skizziert allerdings erst hinterher. Teilweise musste dann mit Bildausschnitten gearbeitet werden, die man noch optimieren hätte können.
 
 **Auch gute Vorbereitung schafft neue Herausforderungen:**  
-Storyboard und Drehplan ermöglichten zwar den reibungslosen Dreh, dabei wurden jedoch die Kameras fast durchgängig laufen gelassen. Dies geschah der Einfachheit halber da Platzmangel herrschte und die Kameras teilweise schlecht zugängig waren, was für den Moment eine sinnvolle Entscheidung war. Im Nachhinein wurde daraus im Schnitt jedoch mehr Zeitaufwand, da eine große Menge an Videomaterial gesichtet und aussortiert werden musste, schon alleine für den Rohschnitt.
+Storyboard und Drehplan ermöglichten zwar den reibungslosen Dreh, dabei wurden jedoch die Kameras fast durchgängig laufen gelassen. Dies geschah der Einfachheit halber da Platzmangel herrschte und die Kameras teilweise schlecht zugängig waren, was für den Moment eine sinnvolle Entscheidung war. Im Nachhinein wurde daraus im Schnitt jedoch ein enormer Mehraufwand, da eine große Menge an Videomaterial gesichtet und aussortiert werden musste, schon alleine für den Rohschnitt.
 
 **Koordination der Arbeitsschritte in der Videonachbearbeitung:**  
-Aus technischen Gründen war die Reihenfolge von Schnitt, Animation und After Effects größtenteils nur nacheinander möglich. Paralleles Arbeiten an dem Video war also nur teilweise möglich und so wurden immer unterschiedliche Teile des Teams ausgebremst, was den Zeitrahmen wiederum schwierig abschätzen und planen ließ. Gerade der letzte Schritt, das Zusammenfügen von Komponenten aus Realfilm und Animation war abhängig von der Fertigstellung dieser vorausgehenden Komponenten und wurde im Umfang unterschätzt. 
+Aus technischen Gründen war die Reihenfolge von Schnitt, Animation und After Effects größtenteils nur nacheinander möglich. Es konnte also nur teilweise parallel am Video gearbeitet werden und so wurden immer wieder unterschiedliche Teile des Teams ausgebremst, was den Zeitrahmen wiederum schwierig abschätzen und planen ließ. Gerade der letzte Schritt, das Zusammenfügen von Komponenten aus Realfilm und Animation war abhängig von der Fertigstellung dieser vorausgehenden Komponenten und wurde im Umfang unterschätzt.  
+In diesem Projektabschnitt waren Absprachen und Koordination also eine besondere Herausforderung, konnten aber dank regelmäßiger Meetings sowie der sorgfältigen Protokollierung von Entscheidungsprozessen in Asana gut gemeistert werden.
 
 **Rendern:**
 
@@ -195,10 +213,10 @@ Aus technischen Gründen war die Reihenfolge von Schnitt, Animation und After Ef
 
 ### Ausblick und Auswertung
 
-Ausbaufähige Aspekte am Video:
+Folgende Aspekte am Video sind im Endeffekt ausbaufähig geblieben:
 - in größerem Zeitrahmen Darstellung weiterer (evtl. aller) Features
-- Verdeckungen
-- Taktung am Ende des Videos
-- Soundeffekte ausbauen (z.B. Erscheinen und Verschwinden von PLANT-E)
+- Genauigkeit bei den Verdeckungen
+- weitere Soundeffekte (z.B. beim Erscheinen und Verschwinden von PLANT-E)
+- in der Schlusssequenz des Videos ist außerdem die Schnitt-Taktung auf die Musik noch optimierbar
 
-Insgesamt jedoch zufriedenstellend weil ... 
+Insgesamt befinden wir das Ergebnis-Video jedoch als zufriedenstellend. Wie bei den meisten gestalterischen Projekten mussten die anfänglichen Vorstellungen in der Praxis aufgrund damit verbundener Zeitaufwände auf das Wesentliche beschränkt werden. Unser Anspruch dabei war dennoch zu einem insgesamt abgerundeten Ergebnis zu kommen, das für den Betrachter sowohl ansprechend als auch verständlich ist, was uns glücklicherweise gelungen ist. 
