@@ -15,8 +15,8 @@ pandoc *.md -o text.tex \
 pdflatex -interaction nonstopmode vorlage \
 rm *.aux *.log *.out
 
-1-idea.md 2-vision.md 3-prototype.md 4-conclusion.md 5-appendix.md
+1-idea.md 2-vision.md 3-prototype.md 4-conclusion.md
 
-pandoc 3-prototype.md -o text.tex; \
+pandoc 1-idea.md 3-prototype.md 4-conclusion.md -o text.tex; \
 pdflatex -interaction nonstopmode vorlage; \
 rm *.aux *.log *.out

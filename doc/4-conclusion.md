@@ -24,3 +24,5 @@ Vorteilhaft ist gewesen, dass viele Teile der Aufgaben nicht gänzlich neu gewes
 Dennoch ist eine schöne Vision für die Zukunft entstanden, die in einem spannenden Film visualisiert worden ist. Wer weiß, vielleicht hat schon bald jeder seinen kleinen PLANT-E zuhause und schöne grüne Beete, Töpfe und Balkone.
 
 Leider ist das Ergebnis im Prototypen für das Team nicht sehr befriedigend ausgefallen, dadurch sind aber auch die Grenzen der aktuellen Technologien deutlich geworden. Gerade für den Blick in die Zukunft ist das Scheitern unabdingbar und die Grundlage für Fortschritt und Entwicklung. Außerdem handelt es sich natürlich auch nur um einen Prototyp, der zeigen sollen, was heutzutage schon möglich bzw. noch nicht möglich ist.
+
+# Anhang {#anhang}

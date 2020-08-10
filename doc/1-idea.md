@@ -5,6 +5,7 @@ author: Robert Ackermann, Hannes Dröse, Dennis Krischal, Livia Schumm
 date: 03.08.2020
 abstract: |
     Im Folgenden behandeln wir Anfänge, Entwicklung und Ergebnisse des Semester-Projektes "Grüni" im Rahmen des Medienprojekt-Moduls. Grüni ist die Vision einer Anwendung um Nutzern das Gärtnern sowie das gärtnern lernen zu erleichtern.
+lang: de
 ---
 
 # Die Idee
@@ -171,7 +172,7 @@ Dieses Projekt entstand durch eine Kooperation aus "Smartgreen Solutions" und "T
 
 **Anmerkung:**
 
-Eine zusammengetragene Liste weiterer Cowdfunding Projekte zu dem Thema findet sich in unserem Projekt unter den Recherchen im Managment-Tool Asana.[^asana2]
+Eine zusammengetragene Liste weiterer Crowdfunding Projekte zu dem Thema findet sich in unserem Projekt unter den Recherchen im Management-Tool Asana.[^asana2]
 
 [^asana2]: Link: <https://app.asana.com/0/1172859492234369/1172957097729748>
 

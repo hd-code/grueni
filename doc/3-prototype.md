@@ -98,7 +98,8 @@ Zum Verarbeiten der Sensordaten wird ein Raspberry Pi 4 benutzt, da dieser der P
 
 Um diese Sensoren auf dem Raspberry Pi nutzen zu können sind externe Bibliotheken nötig gewesen. Hierbei handelt es sich um: Adafruit_ADSx15[^ada], Adafruit_DHT[^dht] und smbus[^smb].
 
-!!!!!!!!!!!!!
+**Anmerkung zur Abgrenzung zwischen dem Gruppenprojekt "Grüni" und dem IT-Praxisprojekt von Dennis Krischal:**  
+Die Projekte überschneiden sich in genau einem Punkt, da es sich angeboten hat für beide die gleiche Hardware zum Auslesen der Sensoren zu benutzen.
 
 [^ada]: Link: <https://github.com/adafruit/Adafruit_Python_ADS1x15>
 [^dht]: Link: <https://github.com/adafruit/Adafruit_Python_DHT>
