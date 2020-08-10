@@ -33,7 +33,7 @@ Der nächste Schritt, nachdem eine Projektrichtung festgesteckt worden ist, ist 
 
 **Anmerkung:**
 
-Im Folgenden werden nur einige, wesentliche Aspekte dieser Recherche zusammengetragen, weitere gesammelte Informationen und Artikel finden sich in unserem Projekt unter den Recherchen im Managment-Tool Asana.[^asana1]
+Im Folgenden werden nur einige, wesentliche Aspekte dieser Recherche zusammengetragen, weitere gesammelte Informationen und Artikel finden sich in unserem Projekt unter den Recherchen im Management-Tool Asana.[^asana1]
 
 [^asana1]: Allgemeine Recherche und Trends: <https://app.asana.com/0/1172859492234369/1172897938417709>  
 Pflanzen Apps: <https://app.asana.com/0/1172859492234369/1172897938417707>  
