@@ -1655,6 +1655,15 @@ Verändern von eigenen Geometrien und Meshes ist schwerlich möglich, da
 AFrame dafür keinen Editor oder Oberfläche bietet, wie man es z.B. von
 Unity kennt.
 
+Das Darstellen von Text in der Szene ist ebenfalls mit Schwierigkeiten
+verbunden. So werden von AFrame keine Sonderzeichen oder Umlaute
+unterstützt. Auch ein ``ß'' kann nicht dargestellt werden. Dies ist
+besonders für eine Anwendung in deutscher Sprache ein großes Manko.
+Ebenso problematisch ist das Rendern von Texten variabler Länge, da
+AFrame zwar ein Auto-Scaling für Texte unterstützt, dies aber nur mit
+den simpelsten Elementen zusammen verwendet werden kann. Die Grenzen
+dieser Technologie sind sehr schnell erreicht.
+
 Das gravierendste Problem ist das nicht vorhandene Logging von Fehlern
 in AFrame und AR.js. Fehler in der Syntax werden nicht angezeigt und
 auch beim Auftreten von Fehlern während des Aufrufens der Seite, gibt es
